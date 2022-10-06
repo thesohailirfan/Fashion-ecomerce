@@ -5,7 +5,7 @@ import Heart from "../assets/landingPage/Heart.png";
 import Bag from "../assets/landingPage/Bag.png";
 import Hamburger from "../assets/landingPage/Hamburger.png";
 
-const header = () => {
+const Header = () => {
   return (
     <div className="bg-[#f2f2f2] w-[100vw] h-[10vh] flex items-center justify-around ">
       <div className="w-[80%] h-[100%] flex justify-between items-center ">
@@ -41,4 +41,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;
