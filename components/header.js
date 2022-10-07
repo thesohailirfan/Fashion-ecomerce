@@ -5,9 +5,12 @@ import Heart from "../assets/landingPage/Heart.png";
 import Bag from "../assets/landingPage/Bag.png";
 import Hamburger from "../assets/landingPage/Hamburger.png";
 
-const Header = () => {
+const Header = ({ bgColor }) => {
   return (
-    <div className="bg-[#f2f2f2] w-[100vw] h-[10vh] flex items-center justify-around ">
+    <div
+      className="bg-[#F2F2F2] w-[100vw] h-[10vh] flex items-center justify-around "
+      style={{ backgroundColor: bgColor }}
+    >
       <div className="w-[80%] h-[100%] flex justify-between items-center ">
         <Image src={Logo} height={80} width={200} />
         <div className="w-[78%] h-[100%]  flex items-center justify-around text-[14px] font-[600]">
