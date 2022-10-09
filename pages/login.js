@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import heroImg from "../assets/signupLogin/signupImg.png";
+import heroImg from "../assets/signupLogin/loginImg.png";
 import gIcon from "../assets/signupLogin/googleIcon.png";
 import mailIcon from "../assets/signupLogin/mailIcon.png";
 import lockIcon from "../assets/signupLogin/lockIcon.png";
@@ -30,7 +30,7 @@ const signup = () => {
         <div className=" w-[45%] h-[100%] flex items-center ">
           <div className="w-[90%] h-[60%]  flex flex-col items-center justify-around">
             <div>
-              <p className="font-[700] text-[20px]">Sign Up</p>
+              <p className="font-[700] text-[20px]">Login</p>
             </div>
             <div className="w-[100%] flex flex-col items-center gap-[10px]">
               <div className="w-[80%] flex items-center border p-[10px]">
@@ -51,22 +51,20 @@ const signup = () => {
                 />
                 <Image src={lockIcon} />
               </div>
-              <div className="w-[80%] flex items-center border p-[10px]">
-                <input
-                  type="text"
-                  placeholder="Password*"
-                  className="w-[95%] h-[100%] border-none;
-                  outline-0"
-                />
-                <Image src={lockIcon} />
+            </div>
+            <div className="text-center">
+              <div className="flex  gap-[10px] mb-[20px]">
+                <input type="checkbox" />
+                <p>Login as Employer</p>
               </div>
+              <a href="#">Forgot Password</a>
             </div>
             <div>
               <button className="bg-[#0C222C] w-[20rem] text-white  p-[15px]  rounded rounded-[100px]">
-                Create Account
+                Login
               </button>
             </div>
-            <a href="#">Already have an account ? Log In</a>
+            <a href="#">Don’t have an account ? Sign up</a>
           </div>
         </div>
       </div>
