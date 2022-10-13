@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
 
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
@@ -42,7 +41,7 @@ export default function Home() {
 
       {/* men section */}
 
-      <div className="w-[90%] h-[95vh] flex justify-between mt-[70px]">
+      <div className="w-[90%] h-[95vh] flex justify-between mt-[50px]">
         <div className=" w-[30%] h-[90%] flex flex-col text-[30px] text-center justify-between relative">
           <p className="underline font-bold">Men</p>
           <Image src={MenImg} />
@@ -122,7 +121,7 @@ export default function Home() {
       </div>
 
       {/* new arrivals */}
-      <a href="#" className="w-[90%] h-[45vh] bg-[#4287f5] mt-[100px] relative">
+      <a href="#" className="w-[90%] h-[45vh]  mt-[100px] relative">
         <Image src={newArrivals} />
         <div className="text-center w-[150px] absolute bottom-[40%] left-[20%] ">
           <p className="border w-[150px] text-[22px] bg-[#333333] text-white font-bold">
