@@ -14,11 +14,21 @@ const Header = ({ bgColor }) => {
       <div className="w-[80%] h-[100%] flex justify-between items-center ">
         <Image src={Logo} height={80} width={200} />
         <div className="w-[78%] h-[100%]  flex items-center justify-around text-[14px] font-[600]">
-          <button className="font-bold">HOME</button>
-          <button className="text-[#535353]">MEN</button>
-          <button className="text-[#535353]">WOMEN</button>
-          <button className="text-[#535353]">SHOP</button>
-          <button className="text-[#535353]">CONTACT US</button>
+          <a href="#" className="font-bold">
+            HOME
+          </a>
+          <a href="#" className="text-[#535353]">
+            MEN
+          </a>
+          <a href="#" className="text-[#535353]">
+            WOMEN
+          </a>
+          <a href="#" className="text-[#535353]">
+            SHOP
+          </a>
+          <a href="#" className="text-[#535353]">
+            CONTACT US
+          </a>
           <input
             type="text"
             name=""
@@ -29,16 +39,16 @@ const Header = ({ bgColor }) => {
         </div>
       </div>
       <div className="  w-[15%] flex justify-between flex items-center">
-        <button>
+        <a href="#">
           <Image src={Heart} />
-        </button>
-        <button>
+        </a>
+        <a href="#">
           <Image src={Bag} />
-        </button>
+        </a>
 
-        <button>
+        <a href="#">
           <Image src={Hamburger} />
-        </button>
+        </a>
       </div>
     </div>
   );

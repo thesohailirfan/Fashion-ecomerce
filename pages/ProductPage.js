@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import Header from "../components/Header";
 import Image from "next/image";
 import ProductImage from "../assets/productPage/imageBanner.png";
@@ -9,33 +10,66 @@ import twiterIcon from "../assets/productPage/twtIcon.png";
 import dropDown from "../assets/productPage/dropDown.png";
 
 const ProductPage = () => {
+  const [openDetails, setOpenDetails] = useState(true);
+  function closeDetails() {
+    alert(openDetails);
+  }
+
   return (
     <div className="flex flex-col items-center ">
       <Header bgColor="#FFFFFF" />
       <div className="w-[80%] h-[80vh]  mt-[2rem] flex justify-between">
         <div className="w-[47%] h-[100%] flex flex-col justify-around">
           <div className="w-[100%] h-[75%] ">
-            <div className="h-[75%]">
+            <a href="#" className="h-[75%]">
               <Image src={ProductImage} />
-            </div>
+            </a>
             <div className="flex w-[100%] h-[25%] items-center justify-around">
-              <Image src={ProductImage} width={70} height={70} />
-              <Image src={ProductImage} width={70} height={70} />
-              <Image src={ProductImage} width={70} height={70} />
-              <Image src={ProductImage} width={70} height={70} />
-              <Image src={ProductImage} width={70} height={70} />
-              <Image src={ProductImage} width={70} height={70} />
+              <a href="#">
+                <Image src={ProductImage} width={50} height={50} />
+              </a>
+
+              <a href="#">
+                <Image src={ProductImage} width={50} height={50} />
+              </a>
+              <a href="#">
+                <Image src={ProductImage} width={50} height={50} />
+              </a>
+              <a href="#">
+                <Image src={ProductImage} width={50} height={50} />
+              </a>
+              <a href="#">
+                <Image src={ProductImage} width={50} height={50} />
+              </a>
+              <a href="#">
+                <Image src={ProductImage} width={50} height={50} />
+              </a>
+              <a href="#">
+                <Image src={ProductImage} width={50} height={50} />
+              </a>
             </div>
           </div>
           <div className="w-[100%] h-[25%]  flex flex-col justify-around ">
             <p>Others Things You Might Like :</p>
             <div className="flex w-[100%]  items-center justify-around">
-              <Image src={ProductImage} width={70} height={70} />
-              <Image src={ProductImage} width={70} height={70} />
-              <Image src={ProductImage} width={70} height={70} />
-              <Image src={ProductImage} width={70} height={70} />
-              <Image src={ProductImage} width={70} height={70} />
-              <Image src={ProductImage} width={70} height={70} />
+              <a href="#">
+                <Image src={ProductImage} width={80} height={80} />
+              </a>
+              <a href="#">
+                <Image src={ProductImage} width={80} height={80} />
+              </a>
+              <a href="#">
+                <Image src={ProductImage} width={80} height={80} />
+              </a>
+              <a href="#">
+                <Image src={ProductImage} width={80} height={80} />
+              </a>
+              <a href="#">
+                <Image src={ProductImage} width={80} height={80} />
+              </a>
+              <a href="#">
+                <Image src={ProductImage} width={80} height={80} />
+              </a>
             </div>
           </div>
         </div>
@@ -110,9 +144,25 @@ const ProductPage = () => {
             </div>
           </div>
           <div className="mt-[10px] w-[80%]">
-            <button className="border w-[100%] p-[7px] border-[1px] border-[#ADADAD] flex items-center justify-between px-[20px] rounded-lg">
-              <p className="justify-self-satrt">Product Details</p>
-              <Image src={dropDown} />
+            <button
+              onClick={() => setOpenDetails(false)}
+              className="border w-[100%] p-[7px] border-[1px] border-[#ADADAD] flex items-center justify-between px-[20px] rounded-lg"
+            >
+              {openDetails == true ? (
+                <div className="w-[100%] flex items-center justify-between">
+                  <p className="justify-self-satrt">Product Details</p>
+                  <Image src={dropDown} />
+                </div>
+              ) : (
+                <div className="min-h-[30px]">
+                  <button
+                    onClick={() => setOpenDetails(true)}
+                    className="border"
+                  >
+                    close
+                  </button>
+                </div>
+              )}
             </button>
             <button className="border w-[100%] p-[7px] border-[1px] border-[#ADADAD] flex items-center justify-between px-[20px] rounded-lg">
               <p className="justify-self-satrt">Product Description</p>
