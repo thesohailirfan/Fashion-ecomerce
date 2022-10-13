@@ -5,13 +5,21 @@ import cImg from "../assets/profile/circleImg.png";
 import powerImg from "../assets/profile/powerImg.png";
 import delImg from "../assets/profile/delImg.png";
 import eImg from "../assets/profile/editImg.png";
+import arrowImg from "../assets/profile/arrow.png";
+
 const profile = () => {
   return (
     <div className="w-[100vw] h-[100vh]   flex items-center justify-center">
-      <div className="self-start ">
+      <div className="self-start relative">
         <Image src={bgImg} />
+        <button className="rounded absolute bg-[#FFFFFF] p-[8px] right-[1rem] top-[1rem] text-[12px]">
+          Change Cover
+        </button>
+        <button className="absolute top-[1rem] left-[1rem]">
+          <Image src={arrowImg} width={40} height={40} />
+        </button>
       </div>
-      <div className="absolute w-[90%] h-[80%]  flex justify-between">
+      <div className="absolute w-[80%] h-[70%]  flex justify-between ">
         <div className="w-[30%] h-[100%] bg-[#FFFFFF]  flex flex-col items-center justify-around">
           <div className="relative">
             <div className="w-[150px]">
@@ -55,28 +63,28 @@ const profile = () => {
                   <p>First Name</p>
                   <input
                     type="text"
-                    className="border border-1 border-black rounded-[5px] w-[15rem]"
+                    className="border border-2 border-black rounded-[5px] w-[15rem]"
                   />
                 </div>
                 <div>
                   <p>Phone no</p>
                   <input
                     type="text"
-                    className="border border-1 border-black rounded-[5px] w-[15rem]"
+                    className="border border-2 border-black rounded-[5px] w-[15rem]"
                   />
                 </div>
                 <div>
                   <p>State</p>
                   <input
                     type="text"
-                    className="border border-1 border-black rounded-[5px] w-[15rem]"
+                    className="border border-2 border-black rounded-[5px] w-[15rem]"
                   />
                 </div>
                 <div>
                   <p>Pincode</p>
                   <input
                     type="text"
-                    className="border border-1 border-black rounded-[5px] w-[15rem]"
+                    className="border border-2 border-black rounded-[5px] w-[15rem]"
                   />
                 </div>
               </div>
@@ -85,34 +93,34 @@ const profile = () => {
                   <p>Last Name</p>
                   <input
                     type="text"
-                    className="border border-1 border-black rounded-[5px] w-[15rem]"
+                    className="border border-2 border-black rounded-[5px] w-[15rem]"
                   />
                 </div>
                 <div>
                   <p>E-Mail Address</p>
                   <input
                     type="text"
-                    className="border border-1 border-black rounded-[5px] w-[15rem]"
+                    className="border border-2 border-black rounded-[5px] w-[15rem]"
                   />
                 </div>
                 <div>
                   <p>City</p>
                   <input
                     type="text"
-                    className="border border-1 border-black rounded-[5px] w-[15rem]"
+                    className="border border-2 border-black rounded-[5px] w-[15rem]"
                   />
                 </div>
                 <div>
                   <p>Address</p>
                   <input
                     type="text"
-                    className="border border-1 border-black rounded-[5px] w-[15rem]"
+                    className="border border-2 border-black rounded-[5px] w-[15rem]"
                   />
                 </div>
               </div>
             </div>
             <div className="self-start">
-              <button className="border p-[8px] border-1 border-[#000000] w-[100px]">
+              <button className="border p-[8px] border-1 border-[#000000] w-[100px] rounded">
                 Update
               </button>
             </div>

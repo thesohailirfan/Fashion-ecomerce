@@ -10,7 +10,7 @@ import lockIcon from "../assets/signupLogin/lockIcon.png";
 const signup = () => {
   return (
     <div className="w-[100vw] h-[100vh] flex items-center justify-center ">
-      <div className="w-[80%] h-[100%]  relative flex">
+      <div className="w-[80%] h-[80%]  relative flex border rounded-lg justify-between">
         <div className="relative w-[55%] h-[100%]">
           <Image
             alt="Mountains"
@@ -22,11 +22,10 @@ const signup = () => {
             <p className="text-[#FFFFFF] ">Login With Google</p>{" "}
             <Image src={gIcon} />
           </button>
-          <div className="absolute right-[25px] top-[40%] w-[50px] h-[50px] bg-[#0C222C] text-white rounded-xl rotate-45 p-[12px]">
-            <p className="rotate-[-45deg]">OR</p>
-          </div>
         </div>
-
+        <div className="absolute right-[45%] top-[40%] w-[50px] h-[50px] bg-[#0C222C] text-white rounded-xl rotate-45 p-[12px]">
+          <p className="rotate-[-45deg]">OR</p>
+        </div>
         <div className=" w-[45%] h-[100%] flex items-center ">
           <div className="w-[90%] h-[60%]  flex flex-col items-center justify-around">
             <div>

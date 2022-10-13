@@ -17,12 +17,12 @@ import saleBanner from "../assets/landingPage/saleBanner.png";
 
 export default function Home() {
   return (
-    <div className="w-[100vw]  overflow-x-hidden		flex flex-col items-center">
+    <div className="w-[100%]  overflow-x-hidden		flex flex-col items-center">
       <Header />
 
       {/* carousel Section */}
       <div>
-        <Carousel className="w-[99vw] ">
+        <Carousel className="w-[99vw] " showThumbs={false}>
           <div className="">
             <Image src={HeroImg} />
           </div>
