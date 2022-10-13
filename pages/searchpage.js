@@ -99,7 +99,7 @@ const searchpage = () => {
             </div>
           </div>
         </div>
-        <div className="w-[70%] min-h-[1800px]  flex flex-col justify-between gap-[20px]">
+        <div className="w-[70%]   flex flex-col justify-between gap-[20px]">
           <input
             type="text"
             name=""
@@ -107,8 +107,8 @@ const searchpage = () => {
             id=""
             className="w-[100%] h-[50px] rounded-[100px] px-[20px] shadow-xl border"
           />
-          <div className="w-[100%] h-[100%] grid grid-cols-3 gap-[20px]">
-            <div className="border h-[80%] border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
+          <div className="w-[100%] mt-[20px] h-[100%] grid grid-cols-3 gap-[20px]">
+            <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
                 <Image src={MenCloth} height={300} width={300} />
               </div>
@@ -141,7 +141,7 @@ const searchpage = () => {
                 </div>
               </div>
             </div>
-            <div className="border h-[80%] border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
+            <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
                 <Image src={MenCloth} height={300} width={300} />
               </div>
@@ -174,7 +174,7 @@ const searchpage = () => {
                 </div>
               </div>
             </div>
-            <div className="border h-[80%] border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
+            <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
                 <Image src={MenCloth} height={300} width={300} />
               </div>
@@ -207,7 +207,7 @@ const searchpage = () => {
                 </div>
               </div>
             </div>
-            <div className="border h-[80%] border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
+            <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
                 <Image src={MenCloth} height={300} width={300} />
               </div>
@@ -240,7 +240,7 @@ const searchpage = () => {
                 </div>
               </div>
             </div>
-            <div className="border h-[80%] border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
+            <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
                 <Image src={MenCloth} height={300} width={300} />
               </div>
@@ -273,7 +273,7 @@ const searchpage = () => {
                 </div>
               </div>
             </div>
-            <div className="border h-[80%] border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
+            <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
                 <Image src={MenCloth} height={300} width={300} />
               </div>
@@ -306,7 +306,7 @@ const searchpage = () => {
                 </div>
               </div>
             </div>
-            <div className="border h-[80%] border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
+            <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
                 <Image src={MenCloth} height={300} width={300} />
               </div>
@@ -339,7 +339,7 @@ const searchpage = () => {
                 </div>
               </div>
             </div>
-            <div className="border h-[80%] border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
+            <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
                 <Image src={MenCloth} height={300} width={300} />
               </div>
@@ -372,7 +372,7 @@ const searchpage = () => {
                 </div>
               </div>
             </div>
-            <div className="border h-[80%] border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
+            <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
                 <Image src={MenCloth} height={300} width={300} />
               </div>
