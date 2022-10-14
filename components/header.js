@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import Logo from "../assets/landingPage/logo.png";
-import Heart from "../assets/landingPage/Heart.png";
-import Bag from "../assets/landingPage/Bag.png";
-import Hamburger from "../assets/landingPage/Hamburger.png";
+import Logo from "../public/assets/landingPage/logo.png";
+import Heart from "../public/assets/landingPage/Heart.png";
+import Bag from "../public/assets/landingPage/Bag.png";
+import Hamburger from "../public/assets/landingPage/Hamburger.png";
 
 const Header = ({ bgColor }) => {
   return (

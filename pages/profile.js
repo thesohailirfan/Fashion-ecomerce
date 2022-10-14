@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import bgImg from "../assets/profile/bgImg.png";
-import cImg from "../assets/profile/circleImg.png";
-import powerImg from "../assets/profile/powerImg.png";
-import delImg from "../assets/profile/delImg.png";
-import eImg from "../assets/profile/editImg.png";
-import arrowImg from "../assets/profile/arrow.png";
+import bgImg from "../public/assets/profile/bgImg.png";
+import cImg from "../public/assets/profile/circleImg.png";
+import powerImg from "../public/assets/profile/powerImg.png";
+import delImg from "../public/assets/profile/delImg.png";
+import eImg from "../public/assets/profile/editImg.png";
+import arrowImg from "../public/assets/profile/arrow.png";
 
 const profile = () => {
   return (

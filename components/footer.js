@@ -1,11 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import logo from "../assets/landingPage/logo.png";
-import igIcon from "../assets/socialIcons/igIcon.png";
-import fbIcon from "../assets/socialIcons/fbIcon.png";
-import wpIcon from "../assets/socialIcons/wpIcon.png";
-import twiterIcon from "../assets/socialIcons/twiterIcon.png";
-import send from "../assets/socialIcons/send.png";
+
+import logo from "../public/assets/landingPage/logo.png";
+import igIcon from "../public/assets/socialIcons/igIcon.png";
+import fbIcon from "../public/assets/socialIcons/fbIcon.png";
+import wpIcon from "../public/assets/socialIcons/wpIcon.png";
+import twiterIcon from "../public/assets/socialIcons/twiterIcon.png";
+import send from "../public/assets/socialIcons/send.png";
 
 const Footer = () => {
   return (

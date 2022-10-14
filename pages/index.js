@@ -7,14 +7,14 @@ import Head from "next/head";
 import Image from "next/image";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import HeroImg from "../assets/landingPage/hero.png";
-import MenImg from "../assets/landingPage/menImage.png";
-import womenImg from "../assets/landingPage/womenImg.png";
-import MenCloth from "../assets/landingPage/menCloth.png";
-import newArrivals from "../assets/landingPage/newArrivals.png";
-import menSale from "../assets/landingPage/menSale.png";
-import womanSale from "../assets/landingPage/womanSale.png";
-import saleBanner from "../assets/landingPage/saleBanner.png";
+import HeroImg from "../public/assets/landingPage/hero.png";
+import MenImg from "../public/assets/landingPage/menImage.png";
+import womenImg from "../public/assets/landingPage/womenImg.png";
+import MenCloth from "../public/assets/landingPage/menCloth.png";
+import newArrivals from "../public/assets/landingPage/newArrivals.png";
+import menSale from "../public/assets/landingPage/menSale.png";
+import womanSale from "../public/assets/landingPage/womanSale.png";
+import saleBanner from "../public/assets/landingPage/saleBanner.png";
 
 // const handleDragStart = (e) => e.preventDefault();
 const items = [

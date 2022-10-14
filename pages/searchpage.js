@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "../components/Header.js";
+import Header from "../components/Header";
 import Image from "next/image";
-import rightarrow from "../assets/searchpage/rightArror.png";
-import MenCloth from "../assets/landingPage/menCloth.png";
-import heart from "../assets/landingPage/heart.png";
-import star from "../assets/searchpage/start.png";
+import rightarrow from "../public/assets/searchpage/rightArror.png";
+import MenCloth from "../public/assets/landingPage/menCloth.png";
+import heart from "../public/assets/landingPage/heart.png";
+import star from "../public/assets/searchpage/start.png";
 const searchpage = () => {
   return (
     <div className="w-[100vw] flex flex-col items-center">

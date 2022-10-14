@@ -1,13 +1,13 @@
 import React from "react";
 import { useState } from "react";
-import Header from "../components/Header.js";
+import Header from "../components/Header";
 import Image from "next/image";
-import ProductImage from "../assets/productPage/imageBanner.png";
-import igIcon from "../assets/productPage/igIcon.png";
-import fbIcon from "../assets/productPage/fbIcon.png";
-import wpIcon from "../assets/productPage/wpIcon.png";
-import twiterIcon from "../assets/productPage/twtIcon.png";
-import dropDown from "../assets/productPage/dropDown.png";
+import ProductImage from "../public/assets/productPage/imageBanner.png";
+import igIcon from "../public/assets/productPage/igIcon.png";
+import fbIcon from "../public/assets/productPage/fbIcon.png";
+import wpIcon from "../public/assets/productPage/wpIcon.png";
+import twiterIcon from "../public/assets/productPage/twtIcon.png";
+import dropDown from "../public/assets/productPage/dropDown.png";
 
 const ProductPage = () => {
   const [openDetails, setOpenDetails] = useState(true);

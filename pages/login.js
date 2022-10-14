@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import heroImg from "../assets/signupLogin/loginImg.png";
-import gIcon from "../assets/signupLogin/googleIcon.png";
-import mailIcon from "../assets/signupLogin/mailIcon.png";
-import lockIcon from "../assets/signupLogin/lockIcon.png";
+import heroImg from "../public/assets/signupLogin/loginImg.png";
+import gIcon from "../public/assets/signupLogin/googleIcon.png";
+import mailIcon from "../public/assets/signupLogin/mailIcon.png";
+import lockIcon from "../public/assets/signupLogin/lockIcon.png";
 
 const signup = () => {
   return (
