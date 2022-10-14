@@ -16,11 +16,11 @@ import menSale from "../assets/landingPage/menSale.png";
 import womanSale from "../assets/landingPage/womanSale.png";
 import saleBanner from "../assets/landingPage/saleBanner.png";
 
-const handleDragStart = (e) => e.preventDefault();
+// const handleDragStart = (e) => e.preventDefault();
 const items = [
-  <Image src={HeroImg} onDragStart={handleDragStart} role="presentation" />,
-  <Image src={HeroImg} onDragStart={handleDragStart} role="presentation" />,
-  <Image src={HeroImg} onDragStart={handleDragStart} role="presentation" />,
+  <Image key={1} src={HeroImg} role="presentation" />,
+  <Image key={2} src={HeroImg} role="presentation" />,
+  <Image key={3} src={HeroImg} role="presentation" />,
 ];
 
 export default function Home() {
