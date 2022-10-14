@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Header from "../components/Header";
+import Header from "../components/Header.js";
 import Image from "next/image";
 import ProductImage from "../assets/productPage/imageBanner.png";
 import igIcon from "../assets/productPage/igIcon.png";

@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../components/Header";
+import Header from "../components/Header.js";
 import Image from "next/image";
 import rightarrow from "../assets/searchpage/rightArror.png";
 import MenCloth from "../assets/landingPage/menCloth.png";
