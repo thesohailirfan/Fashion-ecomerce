@@ -74,54 +74,97 @@ export default function Home() {
             </a>
           </div>
           <div className="w-[100%] h-[90%] grid grid-cols-3">
-            <a href="#" className="text-center">
-              <Image src={MenCloth} width={200} height={200} />
-              <br />
-              <p className="text-[15px]">Funnel Collor Puffer Jacket</p>
+            <div className="text-center flex flex-col">
+              <div className="w-[100%] ">
+                <Image src={MenCloth} width={200} height={200} />
+              </div>
 
-              <p className="font-bold text-[13px]">$59.00</p>
-            </a>
-            <a href="#" className="text-center">
-              <Image src={MenCloth} width={200} height={200} />
               <br />
-              <p className="text-[15px]">Funnel Collor Puffer Jacket</p>
+              <a href="#" className="text-[15px]">
+                Funnel Collor Puffer Jacket
+              </a>
 
-              <p className="font-bold text-[13px]">$59.00</p>
-            </a>
-            <a href="#" className="text-center">
-              <Image src={MenCloth} width={200} height={200} />
+              <a href="#" className="font-bold text-[13px]">
+                $59.00
+              </a>
+            </div>
+            <div className="text-center flex flex-col">
+              <div>
+                <Image src={MenCloth} width={200} height={200} />
+              </div>
+
               <br />
-              <p className="text-[15px]">Funnel Collor Puffer Jacket</p>
+              <a href="#" className="text-[15px]">
+                Funnel Collor Puffer Jacket
+              </a>
 
-              <p className="font-bold text-[13px]">$59.00</p>
-            </a>
-            <a href="#" className="text-center">
-              <Image src={MenCloth} width={200} height={200} />
+              <a href="#" className="font-bold text-[13px]">
+                $59.00
+              </a>
+            </div>
+            <div className="text-center flex flex-col">
+              <div>
+                <Image src={MenCloth} width={200} height={200} />
+              </div>
+
               <br />
-              <p className="text-[15px]">Funnel Collor Puffer Jacket</p>
+              <a href="#" className="text-[15px]">
+                Funnel Collor Puffer Jacket
+              </a>
 
-              <p className="font-bold text-[13px]">$59.00</p>
-            </a>
-            <a href="#" className="text-center">
-              <Image src={MenCloth} width={200} height={200} />
+              <a href="#" className="font-bold text-[13px]">
+                $59.00
+              </a>
+            </div>
+            <div className="text-center flex flex-col">
+              <div>
+                <Image src={MenCloth} width={200} height={200} />
+              </div>
+
               <br />
-              <p className="text-[15px]">Funnel Collor Puffer Jacket</p>
+              <a href="#" className="text-[15px]">
+                Funnel Collor Puffer Jacket
+              </a>
 
-              <p className="font-bold text-[13px]">$59.00</p>
-            </a>
-            <a href="#" className="text-center">
-              <Image src={MenCloth} width={200} height={200} />
+              <a href="#" className="font-bold text-[13px]">
+                $59.00
+              </a>
+            </div>
+            <div className="text-center flex flex-col">
+              <div>
+                <Image src={MenCloth} width={200} height={200} />
+              </div>
+
               <br />
-              <p className="text-[15px]">Funnel Collor Puffer Jacket</p>
+              <a href="#" className="text-[15px]">
+                Funnel Collor Puffer Jacket
+              </a>
 
-              <p className="font-bold text-[13px]">$59.00</p>
-            </a>
+              <a href="#" className="font-bold text-[13px]">
+                $59.00
+              </a>
+            </div>
+            <div className="text-center flex flex-col">
+              <div>
+                <Image src={MenCloth} width={200} height={200} />
+              </div>
+
+              <br />
+              <a href="#" className="text-[15px]">
+                Funnel Collor Puffer Jacket
+              </a>
+
+              <a href="#" className="font-bold text-[13px]">
+                $59.00
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
       {/* new arrivals */}
-      <a href="#" className="w-[90%] h-[45vh]  mt-[100px] relative">
+
+      <div className="w-[90%] h-[45vh]  mt-[100px] relative">
         <Image src={newArrivals} />
         <div className="text-center w-[150px] absolute bottom-[40%] left-[20%] ">
           <p className="border w-[150px] text-[22px] bg-[#333333] text-white font-bold">
@@ -129,7 +172,7 @@ export default function Home() {
           </p>
           <a className="underline text-black font-bold">show now</a>
         </div>
-      </a>
+      </div>
 
       {/* women section */}
 
@@ -156,48 +199,90 @@ export default function Home() {
             </a>
           </div>
           <div className="w-[100%] h-[90%] grid grid-cols-3">
-            <a href="#" className="text-center">
-              <Image src={MenCloth} width={200} height={200} />
-              <br />
-              <p className="text-[15px]">Funnel Collor Puffer Jacket</p>
+            <div className="text-center flex flex-col">
+              <div>
+                <Image src={MenCloth} width={200} height={200} />
+              </div>
 
-              <p className="font-bold text-[13px]">$59.00</p>
-            </a>
-            <a href="#" className="text-center">
-              <Image src={MenCloth} width={200} height={200} />
               <br />
-              <p className="text-[15px]">Funnel Collor Puffer Jacket</p>
+              <a href="#" className="text-[15px]">
+                Funnel Collor Puffer Jacket
+              </a>
 
-              <p className="font-bold text-[13px]">$59.00</p>
-            </a>
-            <a href="#" className="text-center">
-              <Image src={MenCloth} width={200} height={200} />
+              <a href="#" className="font-bold text-[13px]">
+                $59.00
+              </a>
+            </div>
+            <div className="text-center flex flex-col">
+              <div>
+                <Image src={MenCloth} width={200} height={200} />
+              </div>
+
               <br />
-              <p className="text-[15px]">Funnel Collor Puffer Jacket</p>
+              <a href="#" className="text-[15px]">
+                Funnel Collor Puffer Jacket
+              </a>
 
-              <p className="font-bold text-[13px]">$59.00</p>
-            </a>
-            <a href="#" className="text-center">
-              <Image src={MenCloth} width={200} height={200} />
+              <a href="#" className="font-bold text-[13px]">
+                $59.00
+              </a>
+            </div>
+            <div className="text-center flex flex-col">
+              <div>
+                <Image src={MenCloth} width={200} height={200} />
+              </div>
+
               <br />
-              <p className="text-[15px]">Funnel Collor Puffer Jacket</p>
+              <a href="#" className="text-[15px]">
+                Funnel Collor Puffer Jacket
+              </a>
 
-              <p className="font-bold text-[13px]">$59.00</p>
-            </a>
-            <a href="#" className="text-center">
-              <Image src={MenCloth} width={200} height={200} />
+              <a href="#" className="font-bold text-[13px]">
+                $59.00
+              </a>
+            </div>
+            <div className="text-center flex flex-col">
+              <div>
+                <Image src={MenCloth} width={200} height={200} />
+              </div>
+
               <br />
-              <p className="text-[15px]">Funnel Collor Puffer Jacket</p>
+              <a href="#" className="text-[15px]">
+                Funnel Collor Puffer Jacket
+              </a>
 
-              <p className="font-bold text-[13px]">$59.00</p>
-            </a>
-            <a href="#" className="text-center">
-              <Image src={MenCloth} width={200} height={200} />
+              <a href="#" className="font-bold text-[13px]">
+                $59.00
+              </a>
+            </div>
+            <div className="text-center flex flex-col">
+              <div>
+                <Image src={MenCloth} width={200} height={200} />
+              </div>
+
               <br />
-              <p className="text-[15px]">Funnel Collor Puffer Jacket</p>
+              <a href="#" className="text-[15px]">
+                Funnel Collor Puffer Jacket
+              </a>
 
-              <p className="font-bold text-[13px]">$59.00</p>
-            </a>
+              <a href="#" className="font-bold text-[13px]">
+                $59.00
+              </a>
+            </div>
+            <div className="text-center flex flex-col">
+              <div>
+                <Image src={MenCloth} width={200} height={200} />
+              </div>
+
+              <br />
+              <a href="#" className="text-[15px]">
+                Funnel Collor Puffer Jacket
+              </a>
+
+              <a href="#" className="font-bold text-[13px]">
+                $59.00
+              </a>
+            </div>
           </div>
         </div>
         <div className=" w-[30%] h-[90%] flex flex-col text-[30px] text-center justify-between relative">
@@ -214,7 +299,7 @@ export default function Home() {
 
       {/* sale */}
 
-      <a href="#" className="w-[90%] h-[48vh]  mt-[100px] relative flex ">
+      <div className="w-[90%] h-[48vh]  mt-[100px] relative flex ">
         <a href="#" className="w-[100%] h-[45vh] relative">
           <Image src={womanSale} />
         </a>
@@ -224,7 +309,7 @@ export default function Home() {
         <div className="absolute left-[35%] top-[20%]">
           <Image src={saleBanner} />
         </div>
-      </a>
+      </div>
       <Footer />
     </div>
   );

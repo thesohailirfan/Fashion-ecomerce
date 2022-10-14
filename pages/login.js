@@ -63,7 +63,7 @@ const signup = () => {
                 Login
               </button>
             </div>
-            <a href="#">Don’t have an account ? Sign up</a>
+            <a href="./signup">Don’t have an account ? Sign up</a>
           </div>
         </div>
       </div>

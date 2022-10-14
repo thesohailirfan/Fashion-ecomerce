@@ -46,7 +46,7 @@ const Header = ({ bgColor }) => {
           <Image src={Bag} />
         </a>
 
-        <a className="text-[#535353] text-[18px] font-bold" href="#">
+        <a className="text-[#535353] text-[18px] font-bold" href="./signup">
           SignUp
         </a>
       </div>
