@@ -12,15 +12,10 @@ const signup = () => {
     <div className="w-[100vw] h-[100vh] flex items-center justify-center ">
       <div className="w-[80%] h-[80%]  relative flex border rounded-lg">
         <div className="relative w-[55%] h-[100%]">
-          <Image
-            alt="Mountains"
-            src={heroImg}
-            layout="fill"
-            objectFit="contain"
-          />
+          <Image alt="image" src={heroImg} layout="fill" objectFit="contain" />
           <button className="bg-[#0C222C] w-[15rem] absolute	left-[30%] top-[20%] flex p-[15px] justify-around items-center rounded rounded-[100px]">
             <p className="text-[#FFFFFF] ">Login With Google</p>{" "}
-            <Image src={gIcon} />
+            <Image alt="image" src={gIcon} />
           </button>
         </div>
         <div className="absolute right-[45%] top-[40%] w-[50px] h-[50px] bg-[#0C222C] text-white rounded-xl rotate-45 p-[12px]">
@@ -39,7 +34,7 @@ const signup = () => {
                   className="w-[95%] h-[100%] border-none;
                   outline-0"
                 />
-                <Image src={mailIcon} />
+                <Image alt="image" src={mailIcon} />
               </div>
               <div className="w-[80%] flex items-center border p-[10px]">
                 <input
@@ -48,7 +43,7 @@ const signup = () => {
                   className="w-[95%] h-[100%] border-none;
                   outline-0"
                 />
-                <Image src={lockIcon} />
+                <Image alt="image" src={lockIcon} />
               </div>
               <div className="w-[80%] flex items-center border p-[10px]">
                 <input
@@ -57,7 +52,7 @@ const signup = () => {
                   className="w-[95%] h-[100%] border-none;
                   outline-0"
                 />
-                <Image src={lockIcon} />
+                <Image alt="image" src={lockIcon} />
               </div>
             </div>
             <div>

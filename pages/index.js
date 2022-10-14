@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import AliceCarousel from "react-alice-carousel";
@@ -15,15 +15,19 @@ import newArrivals from "../public/assets/landingPage/newArrivals.png";
 import menSale from "../public/assets/landingPage/menSale.png";
 import womanSale from "../public/assets/landingPage/womanSale.png";
 import saleBanner from "../public/assets/landingPage/saleBanner.png";
-
+import search from "../public/assets/landingPage/search.png";
+import cart from "../public/assets/landingPage/cart.png";
+import blankBox from "../public/assets/landingPage/blankBox.png";
 // const handleDragStart = (e) => e.preventDefault();
 const items = [
-  <Image key={1} src={HeroImg} role="presentation" />,
-  <Image key={2} src={HeroImg} role="presentation" />,
-  <Image key={3} src={HeroImg} role="presentation" />,
+  <Image alt="image" key={1} src={HeroImg} role="presentation" />,
+  <Image alt="image" key={2} src={HeroImg} role="presentation" />,
+  <Image alt="image" key={3} src={HeroImg} role="presentation" />,
 ];
 
 export default function Home() {
+  const [isShown, setIsShown] = useState(false);
+
   return (
     <div className="w-[100%]  overflow-x-hidden		flex flex-col items-center">
       <Header />
@@ -44,7 +48,7 @@ export default function Home() {
       <div className="w-[90%] h-[95vh] flex justify-between mt-[50px]">
         <div className=" w-[30%] h-[90%] flex flex-col text-[30px] text-center justify-between relative">
           <p className="underline font-bold">Men</p>
-          <Image src={MenImg} />
+          <Image alt="image" src={MenImg} />
           <a
             className="absolute bottom-[8%] text-[12px] font-bold bg-white py-[1rem] left-[20%] px-[4rem]"
             href="#"
@@ -73,10 +77,10 @@ export default function Home() {
               ACCESSORIES
             </a>
           </div>
-          <div className="w-[100%] h-[90%] grid grid-cols-3">
+          <div className="w-[100%] h-[90%] grid grid-cols-3 gap-[20px]">
             <div className="text-center flex flex-col">
-              <div className="w-[100%] ">
-                <Image src={MenCloth} width={200} height={200} />
+              <div>
+                <Image alt="image" src={MenCloth} width={500} height={500} />
               </div>
 
               <br />
@@ -90,7 +94,7 @@ export default function Home() {
             </div>
             <div className="text-center flex flex-col">
               <div>
-                <Image src={MenCloth} width={200} height={200} />
+                <Image alt="image" src={MenCloth} width={500} height={500} />
               </div>
 
               <br />
@@ -104,7 +108,7 @@ export default function Home() {
             </div>
             <div className="text-center flex flex-col">
               <div>
-                <Image src={MenCloth} width={200} height={200} />
+                <Image alt="image" src={MenCloth} width={500} height={500} />
               </div>
 
               <br />
@@ -118,7 +122,7 @@ export default function Home() {
             </div>
             <div className="text-center flex flex-col">
               <div>
-                <Image src={MenCloth} width={200} height={200} />
+                <Image alt="image" src={MenCloth} width={500} height={500} />
               </div>
 
               <br />
@@ -132,7 +136,7 @@ export default function Home() {
             </div>
             <div className="text-center flex flex-col">
               <div>
-                <Image src={MenCloth} width={200} height={200} />
+                <Image alt="image" src={MenCloth} width={500} height={500} />
               </div>
 
               <br />
@@ -146,7 +150,7 @@ export default function Home() {
             </div>
             <div className="text-center flex flex-col">
               <div>
-                <Image src={MenCloth} width={200} height={200} />
+                <Image alt="image" src={MenCloth} width={500} height={500} />
               </div>
 
               <br />
@@ -165,7 +169,7 @@ export default function Home() {
       {/* new arrivals */}
 
       <div className="w-[90%] h-[45vh]  mt-[100px] relative">
-        <Image src={newArrivals} />
+        <Image alt="image" src={newArrivals} />
         <div className="text-center w-[150px] absolute bottom-[40%] left-[20%] ">
           <p className="border w-[150px] text-[22px] bg-[#333333] text-white font-bold">
             #newarrivals
@@ -198,10 +202,10 @@ export default function Home() {
               ACCESSORIES
             </a>
           </div>
-          <div className="w-[100%] h-[90%] grid grid-cols-3">
+          <div className="w-[100%] h-[90%] grid grid-cols-3 gap-[20px]">
             <div className="text-center flex flex-col">
               <div>
-                <Image src={MenCloth} width={200} height={200} />
+                <Image alt="image" src={MenCloth} width={500} height={500} />
               </div>
 
               <br />
@@ -215,7 +219,7 @@ export default function Home() {
             </div>
             <div className="text-center flex flex-col">
               <div>
-                <Image src={MenCloth} width={200} height={200} />
+                <Image alt="image" src={MenCloth} width={500} height={500} />
               </div>
 
               <br />
@@ -229,7 +233,7 @@ export default function Home() {
             </div>
             <div className="text-center flex flex-col">
               <div>
-                <Image src={MenCloth} width={200} height={200} />
+                <Image alt="image" src={MenCloth} width={500} height={500} />
               </div>
 
               <br />
@@ -243,7 +247,7 @@ export default function Home() {
             </div>
             <div className="text-center flex flex-col">
               <div>
-                <Image src={MenCloth} width={200} height={200} />
+                <Image alt="image" src={MenCloth} width={500} height={500} />
               </div>
 
               <br />
@@ -257,7 +261,7 @@ export default function Home() {
             </div>
             <div className="text-center flex flex-col">
               <div>
-                <Image src={MenCloth} width={200} height={200} />
+                <Image alt="image" src={MenCloth} width={500} height={500} />
               </div>
 
               <br />
@@ -271,7 +275,7 @@ export default function Home() {
             </div>
             <div className="text-center flex flex-col">
               <div>
-                <Image src={MenCloth} width={200} height={200} />
+                <Image alt="image" src={MenCloth} width={500} height={500} />
               </div>
 
               <br />
@@ -287,7 +291,7 @@ export default function Home() {
         </div>
         <div className=" w-[30%] h-[90%] flex flex-col text-[30px] text-center justify-between relative">
           <p className="underline font-bold">Women</p>
-          <Image src={womenImg} />
+          <Image alt="image" src={womenImg} />
           <a
             href="#"
             className="absolute bottom-[8%] text-[12px] font-bold bg-white py-[1rem] left-[20%] px-[4rem]"
@@ -301,13 +305,13 @@ export default function Home() {
 
       <div className="w-[90%] h-[48vh]  mt-[100px] relative flex ">
         <a href="#" className="w-[100%] h-[45vh] relative">
-          <Image src={womanSale} />
+          <Image alt="image" src={womanSale} />
         </a>
         <a href="#" className="w-[100%] h-[45vh] relative">
-          <Image src={menSale} />
+          <Image alt="image" src={menSale} />
         </a>
         <div className="absolute left-[35%] top-[20%]">
-          <Image src={saleBanner} />
+          <Image alt="image" src={saleBanner} />
         </div>
       </div>
       <Footer />

@@ -11,22 +11,22 @@ const profile = () => {
   return (
     <div className="w-[100vw] h-[100vh]   flex items-center justify-center">
       <div className="self-start relative">
-        <Image src={bgImg} />
+        <Image alt="image" src={bgImg} />
         <button className="rounded absolute bg-[#FFFFFF] p-[8px] right-[1rem] top-[1rem] text-[12px]">
           Change Cover
         </button>
         <button className="absolute top-[1rem] left-[1rem]">
-          <Image src={arrowImg} width={40} height={40} />
+          <Image alt="image" src={arrowImg} width={40} height={40} />
         </button>
       </div>
       <div className="absolute w-[80%] h-[70%]  flex justify-between ">
         <div className="w-[30%] h-[100%] bg-[#FFFFFF]  flex flex-col items-center justify-around">
           <div className="relative">
             <div className="w-[150px]">
-              <Image src={cImg} />
+              <Image alt="image" src={cImg} />
             </div>
             <button className="absolute bottom-[10%] right-[0%] border rounded-[100px] w-[52px] h-[52px] flex items-center bg-white justify-center">
-              <Image src={eImg} width={30} height={30} />
+              <Image alt="image" src={eImg} width={30} height={30} />
             </button>
           </div>
           <div className="w-[100%]">
@@ -48,10 +48,11 @@ const profile = () => {
           </div>
           <div className="flex flex-col gap-[10px] items-center">
             <button className="flex items-center gap-[10px]">
-              <Image src={powerImg} width={20} height={20} /> Logout
+              <Image alt="image" src={powerImg} width={20} height={20} /> Logout
             </button>
             <button className="flex items-center gap-[10px]">
-              <Image src={delImg} width={20} height={20} /> Delete Profile
+              <Image alt="image" src={delImg} width={20} height={20} /> Delete
+              Profile
             </button>
           </div>
         </div>

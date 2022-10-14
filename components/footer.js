@@ -23,10 +23,10 @@ const Footer = () => {
               <p>+91 9383562832</p>
             </div>
             <div className="w-[100%] flex justify-between">
-              <Image src={igIcon} />
-              <Image src={fbIcon} />
-              <Image src={wpIcon} />
-              <Image src={twiterIcon} />
+              <Image alt="image" src={igIcon} />{" "}
+              <Image alt="image" src={fbIcon} />{" "}
+              <Image alt="image" src={wpIcon} />{" "}
+              <Image alt="image" src={twiterIcon} />
             </div>
           </div>
           <div className="w-[20%] h-[100%] font-bold text-white flex flex-col justify-between">
@@ -60,7 +60,7 @@ const Footer = () => {
                   className="w-[80%] px-[15px] bg-[#4B4B4B]"
                 />
                 <button className="w-[20%]">
-                  <Image src={send} />
+                  <Image alt="image" src={send} />
                 </button>
               </div>
             </div>

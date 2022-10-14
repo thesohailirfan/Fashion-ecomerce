@@ -11,9 +11,8 @@ import dropDown from "../public/assets/productPage/dropDown.png";
 
 const ProductPage = () => {
   const [openDetails, setOpenDetails] = useState(true);
-  function closeDetails() {
-    alert(openDetails);
-  }
+  const [openDescription, setOpenDescription] = useState(true);
+  const [openReviews, setOpenReviews] = useState(true);
 
   return (
     <div className="flex flex-col items-center ">
@@ -22,30 +21,30 @@ const ProductPage = () => {
         <div className="w-[47%] h-[100%] flex flex-col justify-around">
           <div className="w-[100%] h-[75%] ">
             <a href="#" className="h-[75%]">
-              <Image src={ProductImage} />
+              <Image alt="image" src={ProductImage} />
             </a>
             <div className="flex w-[100%] h-[25%] items-center justify-around">
               <a href="#">
-                <Image src={ProductImage} width={50} height={50} />
+                <Image alt="image" src={ProductImage} width={50} height={50} />
               </a>
 
               <a href="#">
-                <Image src={ProductImage} width={50} height={50} />
+                <Image alt="image" src={ProductImage} width={50} height={50} />
               </a>
               <a href="#">
-                <Image src={ProductImage} width={50} height={50} />
+                <Image alt="image" src={ProductImage} width={50} height={50} />
               </a>
               <a href="#">
-                <Image src={ProductImage} width={50} height={50} />
+                <Image alt="image" src={ProductImage} width={50} height={50} />
               </a>
               <a href="#">
-                <Image src={ProductImage} width={50} height={50} />
+                <Image alt="image" src={ProductImage} width={50} height={50} />
               </a>
               <a href="#">
-                <Image src={ProductImage} width={50} height={50} />
+                <Image alt="image" src={ProductImage} width={50} height={50} />
               </a>
               <a href="#">
-                <Image src={ProductImage} width={50} height={50} />
+                <Image alt="image" src={ProductImage} width={50} height={50} />
               </a>
             </div>
           </div>
@@ -53,22 +52,22 @@ const ProductPage = () => {
             <p>Others Things You Might Like :</p>
             <div className="flex w-[100%]  items-center justify-around">
               <a href="#">
-                <Image src={ProductImage} width={80} height={80} />
+                <Image alt="image" src={ProductImage} width={80} height={80} />
               </a>
               <a href="#">
-                <Image src={ProductImage} width={80} height={80} />
+                <Image alt="image" src={ProductImage} width={80} height={80} />
               </a>
               <a href="#">
-                <Image src={ProductImage} width={80} height={80} />
+                <Image alt="image" src={ProductImage} width={80} height={80} />
               </a>
               <a href="#">
-                <Image src={ProductImage} width={80} height={80} />
+                <Image alt="image" src={ProductImage} width={80} height={80} />
               </a>
               <a href="#">
-                <Image src={ProductImage} width={80} height={80} />
+                <Image alt="image" src={ProductImage} width={80} height={80} />
               </a>
               <a href="#">
-                <Image src={ProductImage} width={80} height={80} />
+                <Image alt="image" src={ProductImage} width={80} height={80} />
               </a>
             </div>
           </div>
@@ -137,40 +136,80 @@ const ProductPage = () => {
           <div className="flex gap-[20px]">
             <p>Share</p>
             <div className="w-[150px] flex items-center gap-[15px]">
-              <Image src={igIcon} />
-              <Image src={wpIcon} />
-              <Image src={fbIcon} />
-              <Image src={twiterIcon} />
+              <Image alt="image" src={igIcon} />{" "}
+              <Image alt="image" src={wpIcon} />{" "}
+              <Image alt="image" src={fbIcon} />{" "}
+              <Image alt="image" src={twiterIcon} />
             </div>
           </div>
           <div className="mt-[10px] w-[80%]">
-            <button
-              onClick={() => setOpenDetails(false)}
-              className="border w-[100%] p-[7px] border-[1px] border-[#ADADAD] flex items-center justify-between px-[20px] rounded-lg"
-            >
+            <button className="border w-[100%] p-[7px] border-[1px] border-[#ADADAD] flex items-center justify-between px-[20px] rounded-lg">
               {openDetails == true ? (
                 <div className="w-[100%] flex items-center justify-between">
                   <p className="justify-self-satrt">Product Details</p>
-                  <Image src={dropDown} />
+                  <Image
+                    onClick={() => setOpenDetails(false)}
+                    alt="image"
+                    src={dropDown}
+                  />
                 </div>
               ) : (
-                <div className="min-h-[30px]">
+                <div className="min-h-[30px] ">
+                  <div>Product Details</div>
                   <button
                     onClick={() => setOpenDetails(true)}
-                    className="border"
+                    className="border  "
                   >
                     close
                   </button>
                 </div>
               )}
             </button>
+
             <button className="border w-[100%] p-[7px] border-[1px] border-[#ADADAD] flex items-center justify-between px-[20px] rounded-lg">
-              <p className="justify-self-satrt">Product Description</p>
-              <Image src={dropDown} />
+              {openDescription == true ? (
+                <div className="w-[100%] flex items-center justify-between">
+                  <p className="justify-self-satrt">Product Description</p>
+                  <Image
+                    onClick={() => setOpenDescription(false)}
+                    alt="image"
+                    src={dropDown}
+                  />
+                </div>
+              ) : (
+                <div className="min-h-[30px] ">
+                  <div>Product Description</div>
+                  <button
+                    onClick={() => setOpenDescription(true)}
+                    className="border  "
+                  >
+                    close
+                  </button>
+                </div>
+              )}
             </button>
+
             <button className="border w-[100%] p-[7px] border-[1px] border-[#ADADAD] flex items-center justify-between px-[20px] rounded-lg">
-              <p className="justify-self-satrt">Reviews</p>
-              <Image src={dropDown} />
+              {openReviews == true ? (
+                <div className="w-[100%] flex items-center justify-between">
+                  <p className="justify-self-satrt">Reviews</p>
+                  <Image
+                    onClick={() => setOpenReviews(false)}
+                    alt="image"
+                    src={dropDown}
+                  />
+                </div>
+              ) : (
+                <div className="min-h-[30px] ">
+                  <div>Reviews</div>
+                  <button
+                    onClick={() => setOpenReviews(true)}
+                    className="border  "
+                  >
+                    close
+                  </button>
+                </div>
+              )}
             </button>
           </div>
         </div>

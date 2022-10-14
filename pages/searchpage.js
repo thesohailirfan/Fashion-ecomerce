@@ -19,7 +19,7 @@ const searchpage = () => {
                   <input type="checkbox" /> Men
                 </div>
                 <div>
-                  <Image src={rightarrow} />
+                  <Image alt="image" src={rightarrow} />
                 </div>
               </div>
               <div className="flex justify-between">
@@ -27,7 +27,7 @@ const searchpage = () => {
                   <input type="checkbox" /> Women
                 </div>
                 <div>
-                  <Image src={rightarrow} />
+                  <Image alt="image" src={rightarrow} />
                 </div>
               </div>
             </div>
@@ -40,7 +40,7 @@ const searchpage = () => {
                   <input type="checkbox" /> T-shirt
                 </div>
                 <div>
-                  <Image src={rightarrow} />
+                  <Image alt="image" src={rightarrow} />
                 </div>
               </div>
               <div className="flex justify-between">
@@ -48,7 +48,7 @@ const searchpage = () => {
                   <input type="checkbox" /> Shirt
                 </div>
                 <div>
-                  <Image src={rightarrow} />
+                  <Image alt="image" src={rightarrow} />
                 </div>
               </div>
               <div className="flex justify-between">
@@ -56,7 +56,7 @@ const searchpage = () => {
                   <input type="checkbox" /> Jeans
                 </div>
                 <div>
-                  <Image src={rightarrow} />
+                  <Image alt="image" src={rightarrow} />
                 </div>
               </div>
             </div>
@@ -69,7 +69,7 @@ const searchpage = () => {
                   <input type="checkbox" /> Jeans
                 </div>
                 <div>
-                  <Image src={rightarrow} />
+                  <Image alt="image" src={rightarrow} />
                 </div>
               </div>
               <div className="flex justify-between">
@@ -77,7 +77,7 @@ const searchpage = () => {
                   <input type="checkbox" /> One-piece
                 </div>
                 <div>
-                  <Image src={rightarrow} />
+                  <Image alt="image" src={rightarrow} />
                 </div>
               </div>
               <div className="flex justify-between">
@@ -85,7 +85,7 @@ const searchpage = () => {
                   <input type="checkbox" /> Shirt
                 </div>
                 <div>
-                  <Image src={rightarrow} />
+                  <Image alt="image" src={rightarrow} />
                 </div>
               </div>
               <div className="flex justify-between">
@@ -93,7 +93,7 @@ const searchpage = () => {
                   <input type="checkbox" /> T-shirt
                 </div>
                 <div>
-                  <Image src={rightarrow} />
+                  <Image alt="image" src={rightarrow} />
                 </div>
               </div>
             </div>
@@ -110,7 +110,7 @@ const searchpage = () => {
           <div className="w-[100%] mt-[20px] h-[100%] grid grid-cols-3 gap-[20px]">
             <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
-                <Image src={MenCloth} height={300} width={300} />
+                <Image alt="image" src={MenCloth} height={300} width={300} />
               </div>
               <div className="px-[10px]">
                 <div>
@@ -119,18 +119,18 @@ const searchpage = () => {
                 </div>
                 <div className="flex justify-between w-[60%]">
                   <div>
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />
                   </div>
                   <p>4.3k</p>
                 </div>
                 <div className="flex justify-between items-center">
                   <p className="font-bold">79.99$</p>
                   <div className="w-[12px] ">
-                    <Image src={heart} width={20} />
+                    <Image alt="image" src={heart} width={20} />
                   </div>
                   <a
                     href="#"
@@ -143,7 +143,7 @@ const searchpage = () => {
             </div>
             <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
-                <Image src={MenCloth} height={300} width={300} />
+                <Image alt="image" src={MenCloth} height={300} width={300} />
               </div>
               <div className="px-[10px]">
                 <div>
@@ -152,18 +152,18 @@ const searchpage = () => {
                 </div>
                 <div className="flex justify-between w-[60%]">
                   <div>
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />
                   </div>
                   <p>4.3k</p>
                 </div>
                 <div className="flex justify-between items-center">
                   <p className="font-bold">79.99$</p>
                   <div className="w-[12px] ">
-                    <Image src={heart} width={20} />
+                    <Image alt="image" src={heart} width={20} />
                   </div>
                   <a
                     href="#"
@@ -176,7 +176,7 @@ const searchpage = () => {
             </div>
             <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
-                <Image src={MenCloth} height={300} width={300} />
+                <Image alt="image" src={MenCloth} height={300} width={300} />
               </div>
               <div className="px-[10px]">
                 <div>
@@ -185,18 +185,18 @@ const searchpage = () => {
                 </div>
                 <div className="flex justify-between w-[60%]">
                   <div>
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />
                   </div>
                   <p>4.3k</p>
                 </div>
                 <div className="flex justify-between items-center">
                   <p className="font-bold">79.99$</p>
                   <div className="w-[12px] ">
-                    <Image src={heart} width={20} />
+                    <Image alt="image" src={heart} width={20} />
                   </div>
                   <a
                     href="#"
@@ -209,7 +209,7 @@ const searchpage = () => {
             </div>
             <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
-                <Image src={MenCloth} height={300} width={300} />
+                <Image alt="image" src={MenCloth} height={300} width={300} />
               </div>
               <div className="px-[10px]">
                 <div>
@@ -218,18 +218,18 @@ const searchpage = () => {
                 </div>
                 <div className="flex justify-between w-[60%]">
                   <div>
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />
                   </div>
                   <p>4.3k</p>
                 </div>
                 <div className="flex justify-between items-center">
                   <p className="font-bold">79.99$</p>
                   <div className="w-[12px] ">
-                    <Image src={heart} width={20} />
+                    <Image alt="image" src={heart} width={20} />
                   </div>
                   <a
                     href="#"
@@ -242,7 +242,7 @@ const searchpage = () => {
             </div>
             <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
-                <Image src={MenCloth} height={300} width={300} />
+                <Image alt="image" src={MenCloth} height={300} width={300} />
               </div>
               <div className="px-[10px]">
                 <div>
@@ -251,18 +251,18 @@ const searchpage = () => {
                 </div>
                 <div className="flex justify-between w-[60%]">
                   <div>
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />
                   </div>
                   <p>4.3k</p>
                 </div>
                 <div className="flex justify-between items-center">
                   <p className="font-bold">79.99$</p>
                   <div className="w-[12px] ">
-                    <Image src={heart} width={20} />
+                    <Image alt="image" src={heart} width={20} />
                   </div>
                   <a
                     href="#"
@@ -275,7 +275,7 @@ const searchpage = () => {
             </div>
             <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
-                <Image src={MenCloth} height={300} width={300} />
+                <Image alt="image" src={MenCloth} height={300} width={300} />
               </div>
               <div className="px-[10px]">
                 <div>
@@ -284,18 +284,18 @@ const searchpage = () => {
                 </div>
                 <div className="flex justify-between w-[60%]">
                   <div>
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />
                   </div>
                   <p>4.3k</p>
                 </div>
                 <div className="flex justify-between items-center">
                   <p className="font-bold">79.99$</p>
                   <div className="w-[12px] ">
-                    <Image src={heart} width={20} />
+                    <Image alt="image" src={heart} width={20} />
                   </div>
                   <a
                     href="#"
@@ -308,7 +308,7 @@ const searchpage = () => {
             </div>
             <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
-                <Image src={MenCloth} height={300} width={300} />
+                <Image alt="image" src={MenCloth} height={300} width={300} />
               </div>
               <div className="px-[10px]">
                 <div>
@@ -317,18 +317,18 @@ const searchpage = () => {
                 </div>
                 <div className="flex justify-between w-[60%]">
                   <div>
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />
                   </div>
                   <p>4.3k</p>
                 </div>
                 <div className="flex justify-between items-center">
                   <p className="font-bold">79.99$</p>
                   <div className="w-[12px] ">
-                    <Image src={heart} width={20} />
+                    <Image alt="image" src={heart} width={20} />
                   </div>
                   <a
                     href="#"
@@ -341,7 +341,7 @@ const searchpage = () => {
             </div>
             <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
-                <Image src={MenCloth} height={300} width={300} />
+                <Image alt="image" src={MenCloth} height={300} width={300} />
               </div>
               <div className="px-[10px]">
                 <div>
@@ -350,18 +350,18 @@ const searchpage = () => {
                 </div>
                 <div className="flex justify-between w-[60%]">
                   <div>
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />
                   </div>
                   <p>4.3k</p>
                 </div>
                 <div className="flex justify-between items-center">
                   <p className="font-bold">79.99$</p>
                   <div className="w-[12px] ">
-                    <Image src={heart} width={20} />
+                    <Image alt="image" src={heart} width={20} />
                   </div>
                   <a
                     href="#"
@@ -374,7 +374,7 @@ const searchpage = () => {
             </div>
             <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
-                <Image src={MenCloth} height={300} width={300} />
+                <Image alt="image" src={MenCloth} height={300} width={300} />
               </div>
               <div className="px-[10px]">
                 <div>
@@ -383,18 +383,18 @@ const searchpage = () => {
                 </div>
                 <div className="flex justify-between w-[60%]">
                   <div>
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
-                    <Image src={star} />
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />{" "}
+                    <Image alt="image" src={star} />
                   </div>
                   <p>4.3k</p>
                 </div>
                 <div className="flex justify-between items-center">
                   <p className="font-bold">79.99$</p>
                   <div className="w-[12px] ">
-                    <Image src={heart} width={20} />
+                    <Image alt="image" src={heart} width={20} />
                   </div>
                   <a
                     href="#"

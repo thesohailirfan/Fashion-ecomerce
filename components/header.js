@@ -12,7 +12,7 @@ const Header = ({ bgColor }) => {
       style={{ backgroundColor: bgColor }}
     >
       <div className="w-[80%] h-[100%] flex justify-between items-center ">
-        <Image src={Logo} height={80} width={200} />
+        <Image alt="image" src={Logo} height={80} width={200} />
         <div className="w-[78%] h-[100%]  flex items-center justify-around text-[14px] font-[600]">
           <a href="#" className="font-bold">
             HOME
@@ -40,10 +40,10 @@ const Header = ({ bgColor }) => {
       </div>
       <div className="  w-[15%] flex justify-between flex items-center">
         <a href="#">
-          <Image src={Heart} />
+          <Image alt="image" src={Heart} />
         </a>
         <a href="#">
-          <Image src={Bag} />
+          <Image alt="image" src={Bag} />
         </a>
 
         <a className="text-[#535353] text-[18px] font-bold" href="./signup">
