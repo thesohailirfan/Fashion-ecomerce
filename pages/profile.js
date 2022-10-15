@@ -1,129 +1,116 @@
 import React from "react";
 import Image from "next/image";
+import Header from "../components/Header";
 import bgImg from "../public/assets/profile/bgImg.png";
 import cImg from "../public/assets/profile/circleImg.png";
 import powerImg from "../public/assets/profile/powerImg.png";
 import delImg from "../public/assets/profile/delImg.png";
 import eImg from "../public/assets/profile/editImg.png";
 import arrowImg from "../public/assets/profile/arrow.png";
+import profileImg from "../public/assets/profile/profile.png";
 
 const profile = () => {
   return (
-    <div className="w-[100vw] h-[100vh]   flex items-center justify-center">
-      <div className="self-start relative">
-        <Image alt="image" src={bgImg} />
-        <button className="rounded absolute bg-[#FFFFFF] p-[8px] right-[1rem] top-[1rem] text-[12px]">
-          Change Cover
-        </button>
-        <button className="absolute top-[1rem] left-[1rem]">
-          <Image alt="image" src={arrowImg} width={40} height={40} />
-        </button>
-      </div>
-      <div className="absolute w-[80%] h-[70%]  flex justify-between ">
-        <div className="w-[30%] h-[100%] bg-[#FFFFFF]  flex flex-col items-center justify-around">
-          <div className="relative">
-            <div className="w-[150px]">
-              <Image alt="image" src={cImg} />
+    <div className="w-[100%] h-[100vh] flex flex-col items-center gap-[40px] bg-[#F2F2F2]">
+      <Header />
+      <div className="w-[95%] min-h-[500px] h-[80vh]  border border-[#CECECE] rounded-[15px] flex p-[20px] bg-white">
+        <div className="w-[30%] h-[100%] border border-l-[0px] border-t-[0px] border-b-[0px] flex flex-col items-center justify-around gap-[15px] ">
+          <div className=" w-[100%] flex flex-col items-center gap-[10px]">
+            <p className="text-[#AAAAAA] text-[18px]">Your Profile</p>
+            <div className="w-[120px]">
+              <Image src={profileImg} alt="profile image" />
             </div>
-            <button className="absolute bottom-[10%] right-[0%] border rounded-[100px] w-[52px] h-[52px] flex items-center bg-white justify-center">
-              <Image alt="image" src={eImg} width={30} height={30} />
-            </button>
+            <div className="text-center">
+              <p className="font-[600] text-[20px] text-[#000000]">
+                Anirban Roy
+              </p>
+              <a
+                className="text-[#C0C0C0] shadow-lg border-[#C0C0C0] text-[13px]"
+                href="#"
+              >
+                (Click to change your photo)
+              </a>
+            </div>
           </div>
-          <div className="w-[100%]">
-            <button className="border border-x-0 broder-y-1 w-[100%] border-y-[#000000] p-[5px]">
+          <hr className="w-[90%]" />
+          <div className="flex flex-col h-[50%] justify-around max-h-[200px]">
+            <a className="text-[13px] font-bold" href="#">
               Order History
-            </button>
-            <button className="border border-x-0 broder-y-1 w-[100%] border-t-0 border-y-[#000000] p-[5px]">
-              Help Center
-            </button>
-            <button className="border border-x-0 broder-y-1 w-[100%] border-t-0 border-y-[#000000] p-[5px]">
+            </a>
+            <a className="text-[13px] font-bold" href="#">
+              Help Centre
+            </a>
+            <a className="text-[13px] font-bold" href="#">
               Saved Cards
-            </button>
-            <button className="border border-x-0 broder-y-1 w-[100%] border-t-0 border-y-[#000000] p-[5px]">
-              Coupons
-            </button>
-            <button className="border border-x-0 broder-y-1 w-[100%] border-t-0 border-y-[#000000] p-[5px]">
-              Manage Your Account
-            </button>
-          </div>
-          <div className="flex flex-col gap-[10px] items-center">
-            <button className="flex items-center gap-[10px]">
-              <Image alt="image" src={powerImg} width={20} height={20} /> Logout
-            </button>
-            <button className="flex items-center gap-[10px]">
-              <Image alt="image" src={delImg} width={20} height={20} /> Delete
-              Profile
-            </button>
+            </a>
+            <a className="text-[13px] font-bold" href="#">
+              Coupouns
+            </a>
+            <a className="text-[13px] font-bold" href="#">
+              Manage your account
+            </a>
           </div>
         </div>
-        <div className="w-[65%] h-[100%] bg-[#FFFFFF] flex items-center justify-between flex-col p-[20px]">
-          <div className="w-[90%] h-[80%] flex flex-col justify-between">
-            <div className="w-[100%] h-[80%]  flex justify-between">
-              <div className="w-[40%] h-[90%] flex flex-col justify-around">
-                <div>
-                  <p>First Name</p>
-                  <input
-                    type="text"
-                    className="border border-2 border-black rounded-[5px] w-[15rem]"
-                  />
-                </div>
-                <div>
-                  <p>Phone no</p>
-                  <input
-                    type="text"
-                    className="border border-2 border-black rounded-[5px] w-[15rem]"
-                  />
-                </div>
-                <div>
-                  <p>State</p>
-                  <input
-                    type="text"
-                    className="border border-2 border-black rounded-[5px] w-[15rem]"
-                  />
-                </div>
-                <div>
-                  <p>Pincode</p>
-                  <input
-                    type="text"
-                    className="border border-2 border-black rounded-[5px] w-[15rem]"
-                  />
-                </div>
-              </div>
-              <div className="w-[40%] h-[90%] flex flex-col justify-around">
-                <div>
-                  <p>Last Name</p>
-                  <input
-                    type="text"
-                    className="border border-2 border-black rounded-[5px] w-[15rem]"
-                  />
-                </div>
-                <div>
-                  <p>E-Mail Address</p>
-                  <input
-                    type="text"
-                    className="border border-2 border-black rounded-[5px] w-[15rem]"
-                  />
-                </div>
-                <div>
-                  <p>City</p>
-                  <input
-                    type="text"
-                    className="border border-2 border-black rounded-[5px] w-[15rem]"
-                  />
-                </div>
-                <div>
-                  <p>Address</p>
-                  <input
-                    type="text"
-                    className="border border-2 border-black rounded-[5px] w-[15rem]"
-                  />
-                </div>
-              </div>
+        <div className=" h-[100%] w-[70%] text-center ">
+          <div>
+            <p className="text-[#AAAAAA] text-[18px]">Account Settings</p>
+          </div>
+          <div className="flex flex-col gap-[30px] mt-[20px] px-[3rem]">
+            <div className="flex justify-between w-[50%]">
+              <p className="font-bold">First Name</p>
+              <input
+                type="text"
+                className="border-[#CECECE] border-[2px] rounded-[5px] w-[65%]"
+              />
             </div>
-            <div className="self-start">
-              <button className="border p-[8px] border-1 border-[#000000] w-[100px] rounded">
-                Update
-              </button>
+            <div className="flex justify-between w-[50%]">
+              <p className="font-bold">Middle Name</p>
+              <input
+                type="text"
+                className="border-[#CECECE] border-[2px] rounded-[5px] w-[65%]"
+              />
+            </div>
+            <div className="flex justify-between w-[50%]">
+              <p className="font-bold">Last Name</p>
+              <input
+                type="text"
+                className="border-[#CECECE] border-[2px] rounded-[5px] w-[65%]"
+              />
+            </div>
+            <div className="flex justify-between w-[50%]">
+              <p className="font-bold">Middle Name</p>
+              <input
+                type="text"
+                className="border-[#CECECE] border-[2px] rounded-[5px] w-[65%]"
+              />
+            </div>
+            <div className="flex justify-between w-[50%]">
+              <p className="font-bold">Phone No</p>
+              <input
+                type="text"
+                className="border-[#CECECE] border-[2px] rounded-[5px] w-[65%]"
+              />
+            </div>
+            <div className="flex justify-between w-[50%]">
+              <p className="font-bold">Email Address</p>
+              <input
+                type="text"
+                className="border-[#CECECE] border-[2px] rounded-[5px] w-[65%]"
+              />
+            </div>
+            <div className="flex justify-between w-[50%]">
+              <p className="font-bold">State</p>
+              <input
+                type="text"
+                className="border-[#CECECE] border-[2px] rounded-[5px] w-[65%]"
+              />
+            </div>
+            <div className="flex justify-between w-[50%]">
+              <p className="font-bold">City</p>
+              <input
+                type="text"
+                className="border-[#CECECE] border-[2px] rounded-[5px] w-[65%]"
+              />
             </div>
           </div>
         </div>

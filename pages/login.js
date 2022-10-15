@@ -52,10 +52,6 @@ const signup = () => {
               </div>
             </div>
             <div className="text-center">
-              <div className="flex  gap-[10px] mb-[20px]">
-                <input type="checkbox" />
-                <p>Login as Employer</p>
-              </div>
               <a href="#">Forgot Password</a>
             </div>
             <div>

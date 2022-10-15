@@ -72,7 +72,7 @@ const ProductPage = () => {
             </div>
           </div>
         </div>
-        <div className="w-[47%] h-[100%] flex flex-col gap-[15px] justify-around ">
+        <div className="w-[47%] min-h-[100%] flex flex-col gap-[15px] justify-around ">
           <div>
             <p className="text-[24px] font-bold"> Product Name</p>
             <p className="text-[14px] font-[600] text-[#818181]">By Adidas</p>
@@ -142,7 +142,7 @@ const ProductPage = () => {
               <Image alt="image" src={twiterIcon} />
             </div>
           </div>
-          <div className="mt-[10px] w-[80%]">
+          <div className="mt-[10px] w-[80%] min-h-[20%]">
             <button className="border w-[100%] p-[7px] border-[1px] border-[#ADADAD] flex items-center justify-between px-[20px] rounded-lg">
               {openDetails == true ? (
                 <div className="w-[100%] flex items-center justify-between">
@@ -156,6 +156,17 @@ const ProductPage = () => {
               ) : (
                 <div className="min-h-[30px] ">
                   <div>Product Details</div>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Perspiciatis necessitatibus sit labore, harum vel quis
+                    commodi dolorum sunt blanditiis quidem sed consequatur
+                    soluta a, eligendi laboriosam quo nisi? Illo, provident? m
+                    fugit iure! Ullam, fugit? Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Perspiciatis necessitatibus
+                    sit labore, harum vel quis commodi dolorum sunt blanditiis
+                    quidem sed consequatur soluta a, eligendi laboriosam quo
+                    nisi? Illo, provident? m fugit iure! Ullam, fugit?
+                  </p>
                   <button
                     onClick={() => setOpenDetails(true)}
                     className="border  "
@@ -183,6 +194,18 @@ const ProductPage = () => {
                     onClick={() => setOpenDescription(true)}
                     className="border  "
                   >
+                    <p>
+                      {" "}
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Perspiciatis necessitatibus sit labore, harum vel quis
+                      commodi dolorum sunt blanditiis quidem sed consequatur
+                      soluta a, eligendi laboriosam quo nisi? Illo, provident? m
+                      fugit iure! Ullam, fugit? Lorem ipsum dolor sit amet
+                      consectetur adipisicing elit. Perspiciatis necessitatibus
+                      sit labore, harum vel quis commodi dolorum sunt blanditiis
+                      quidem sed consequatur soluta a, eligendi laboriosam quo
+                      nisi? Illo, provident? m fugit iure! Ullam, fugit?
+                    </p>
                     close
                   </button>
                 </div>
@@ -206,6 +229,17 @@ const ProductPage = () => {
                     onClick={() => setOpenReviews(true)}
                     className="border  "
                   >
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Perspiciatis necessitatibus sit labore, harum vel quis
+                      commodi dolorum sunt blanditiis quidem sed consequatur
+                      soluta a, eligendi laboriosam quo nisi? Illo, provident? m
+                      fugit iure! Ullam, fugit? Lorem ipsum dolor sit amet
+                      consectetur adipisicing elit. Perspiciatis necessitatibus
+                      sit labore, harum vel quis commodi dolorum sunt blanditiis
+                      quidem sed consequatur soluta a, eligendi laboriosam quo
+                      nisi? Illo, provident? m fugit iure! Ullam, fugit?
+                    </p>
                     close
                   </button>
                 </div>
