@@ -1,11 +1,41 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import Header from "../components/Header";
 import Image from "next/image";
 import rightarrow from "../public/assets/searchpage/rightArror.png";
 import MenCloth from "../public/assets/landingPage/menCloth.png";
-import heart from "../public/assets/landingPage/heart.png";
+import heart from "../public/assets/landingPage/heart2.png";
 import star from "../public/assets/searchpage/start.png";
-const searchpage = () => {
+import { withRouter } from 'next/router'
+const Searchpage = (props) => {
+
+
+  const [menCheck,setMenCheck]=useState(false)
+  const [womenCheck,setWomenCheck]=useState(false)
+
+  const [menShirtCheck,setMenShirtCheck]=useState(false)
+  const [menTshirtCheck,setMenTshirtCheck]=useState(false)
+  const [menJeansCheck,setMenJeansCheck]=useState(false)
+
+  const [womenJeansCheck,setWomenJeansCheck]=useState(false)
+  const [womenOnePieceCheck,setWomenOnePieceCheck]=useState(false)
+  const [womenShirtCheck,setWomenShirtCheck]=useState(false)
+  const [womenTshirtCheck,setWomenTshirtCheck]=useState(false)
+
+  useEffect(()=>{
+    //console.log(props.router.query.type)
+    if(props.router.query.type=="men")
+    {
+      setMenCheck(true)
+      setWomenCheck(false)
+    }
+    else if(props.router.query.type=="women")
+    {
+      setWomenCheck(true)
+      setMenCheck(false)
+    }
+  },[props.router.query])
+
+
   return (
     <div className="w-[100vw] flex flex-col items-center">
       <Header bgColor="#FFFFFF" />
@@ -16,7 +46,7 @@ const searchpage = () => {
             <div className="flex flex-col gap-[5px] text-[#7B7B7B]">
               <div className="flex justify-between">
                 <div>
-                  <input type="checkbox" /> Men
+                  <input checked={menCheck} onChange={(e)=>{setMenCheck(e.target.checked)}} type="checkbox" /> Men
                 </div>
                 <div>
                   <Image alt="image" src={rightarrow} />
@@ -24,7 +54,7 @@ const searchpage = () => {
               </div>
               <div className="flex justify-between">
                 <div>
-                  <input type="checkbox" /> Women
+                  <input checked={womenCheck} onChange={(e)=>{setWomenCheck(e.target.checked)}} type="checkbox" /> Women
                 </div>
                 <div>
                   <Image alt="image" src={rightarrow} />
@@ -37,7 +67,7 @@ const searchpage = () => {
             <div className="flex flex-col gap-[5px] text-[#7B7B7B]">
               <div className="flex justify-between">
                 <div>
-                  <input type="checkbox" /> T-shirt
+                  <input checked={menTshirtCheck} onChange={(e)=>{setMenTshirtCheck(e.target.checked)}} type="checkbox" /> T-shirt
                 </div>
                 <div>
                   <Image alt="image" src={rightarrow} />
@@ -45,7 +75,7 @@ const searchpage = () => {
               </div>
               <div className="flex justify-between">
                 <div>
-                  <input type="checkbox" /> Shirt
+                  <input checked={menShirtCheck} onChange={(e)=>{setMenShirtCheck(e.target.checked)}} type="checkbox" /> Shirt
                 </div>
                 <div>
                   <Image alt="image" src={rightarrow} />
@@ -53,7 +83,7 @@ const searchpage = () => {
               </div>
               <div className="flex justify-between">
                 <div>
-                  <input type="checkbox" /> Jeans
+                  <input checked={menJeansCheck} onChange={(e)=>{setMenJeansCheck(e.target.checked)}} type="checkbox" /> Jeans
                 </div>
                 <div>
                   <Image alt="image" src={rightarrow} />
@@ -66,7 +96,7 @@ const searchpage = () => {
             <div className="flex flex-col gap-[5px] text-[#7B7B7B]">
               <div className="flex justify-between">
                 <div>
-                  <input type="checkbox" /> Jeans
+                  <input checked={womenJeansCheck} onChange={(e)=>{setWomenJeansCheck(e.target.checked)}} type="checkbox" /> Jeans
                 </div>
                 <div>
                   <Image alt="image" src={rightarrow} />
@@ -74,7 +104,7 @@ const searchpage = () => {
               </div>
               <div className="flex justify-between">
                 <div>
-                  <input type="checkbox" /> One-piece
+                  <input checked={womenOnePieceCheck} onChange={(e)=>{setWomenOnePieceCheck(e.target.checked)}} type="checkbox" /> One-piece
                 </div>
                 <div>
                   <Image alt="image" src={rightarrow} />
@@ -82,7 +112,7 @@ const searchpage = () => {
               </div>
               <div className="flex justify-between">
                 <div>
-                  <input type="checkbox" /> Shirt
+                  <input checked={womenShirtCheck} onChange={(e)=>{setWomenShirtCheck(e.target.checked)}} type="checkbox" /> Shirt
                 </div>
                 <div>
                   <Image alt="image" src={rightarrow} />
@@ -90,7 +120,7 @@ const searchpage = () => {
               </div>
               <div className="flex justify-between">
                 <div>
-                  <input type="checkbox" /> T-shirt
+                  <input checked={womenTshirtCheck} onChange={(e)=>{setWomenTshirtCheck(e.target.checked)}} type="checkbox" /> T-shirt
                 </div>
                 <div>
                   <Image alt="image" src={rightarrow} />
@@ -108,7 +138,7 @@ const searchpage = () => {
             className="w-[100%] h-[50px] rounded-[100px] px-[20px] shadow-xl border"
           />
           <div className="w-[100%] mt-[20px] h-[100%] grid grid-cols-3 gap-[20px]">
-            <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
+            <div className=" border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
                 <Image alt="image" src={MenCloth} height={300} width={300} />
               </div>
@@ -141,7 +171,7 @@ const searchpage = () => {
                 </div>
               </div>
             </div>
-            <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
+            <div className=" border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
                 <Image alt="image" src={MenCloth} height={300} width={300} />
               </div>
@@ -174,7 +204,7 @@ const searchpage = () => {
                 </div>
               </div>
             </div>
-            <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
+            <div className=" border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
                 <Image alt="image" src={MenCloth} height={300} width={300} />
               </div>
@@ -207,7 +237,7 @@ const searchpage = () => {
                 </div>
               </div>
             </div>
-            <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
+            <div className=" border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
                 <Image alt="image" src={MenCloth} height={300} width={300} />
               </div>
@@ -240,7 +270,7 @@ const searchpage = () => {
                 </div>
               </div>
             </div>
-            <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
+            <div className=" border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
                 <Image alt="image" src={MenCloth} height={300} width={300} />
               </div>
@@ -273,7 +303,7 @@ const searchpage = () => {
                 </div>
               </div>
             </div>
-            <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
+            <div className=" border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
                 <Image alt="image" src={MenCloth} height={300} width={300} />
               </div>
@@ -306,7 +336,7 @@ const searchpage = () => {
                 </div>
               </div>
             </div>
-            <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
+            <div className="border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
                 <Image alt="image" src={MenCloth} height={300} width={300} />
               </div>
@@ -339,7 +369,7 @@ const searchpage = () => {
                 </div>
               </div>
             </div>
-            <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
+            <div className=" border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
                 <Image alt="image" src={MenCloth} height={300} width={300} />
               </div>
@@ -372,7 +402,7 @@ const searchpage = () => {
                 </div>
               </div>
             </div>
-            <div className="border border border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
+            <div className=" border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
               <div className="">
                 <Image alt="image" src={MenCloth} height={300} width={300} />
               </div>
@@ -412,4 +442,4 @@ const searchpage = () => {
   );
 };
 
-export default searchpage;
+export default withRouter(Searchpage);

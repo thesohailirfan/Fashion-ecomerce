@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component, useState ,useEffect,useRef} from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import AliceCarousel from "react-alice-carousel";
@@ -15,20 +15,41 @@ import newArrivals from "../public/assets/landingPage/newArrivals.png";
 import menSale from "../public/assets/landingPage/menSale.png";
 import womanSale from "../public/assets/landingPage/womanSale.png";
 import saleBanner from "../public/assets/landingPage/saleBanner.png";
-import search from "../public/assets/landingPage/search.png";
-import cart from "../public/assets/landingPage/cart.png";
-import blankBox from "../public/assets/landingPage/blankBox.png";
-// const handleDragStart = (e) => e.preventDefault();
-const items = [
-  <Image alt="image" key={1} src={HeroImg} role="presentation" />,
-  <Image alt="image" key={2} src={HeroImg} role="presentation" />,
-  <Image alt="image" key={3} src={HeroImg} role="presentation" />,
-];
 
-export default function Home() {
+import { withRouter,useRouter } from "next/router";
+// const handleDragStart = (e) => e.preventDefault();
+
+
+function Home(props) {
   const [isShown, setIsShown] = useState(false);
 
+
+  const messagesEndRef = useRef(null)
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
+  }
+
+  const router=useRouter()
+
+  const items = [
+    <Image className="cursor-pointer" alt="image" key={1} src={HeroImg} role="presentation" onClick={()=>{router.push("/searchpage")}}/>,
+    <Image className="cursor-pointer" alt="image" key={2} src={HeroImg} role="presentation" onClick={()=>{router.push("/searchpage")}}/>,
+    <Image className="cursor-pointer" alt="image" key={3} src={HeroImg} role="presentation" onClick={()=>{router.push("/searchpage")}}/>,
+  ];
+
+
+  useEffect(()=>{
+    //console.log(props.router.query.type)
+    if(props.router.query.type)
+    {
+      scrollToBottom()
+    }
+  },[props.router.query])
+
+
+
   return (
+    <>
     <div className="w-[100%]  overflow-x-hidden		flex flex-col items-center">
       <Header />
 
@@ -49,15 +70,19 @@ export default function Home() {
         <div className=" w-[30%] h-[90%] flex flex-col text-[30px] text-center justify-between relative">
           <p className="underline font-bold">Men</p>
           <Image alt="image" src={MenImg} />
-          <a
-            className="absolute bottom-[8%] text-[12px] font-bold bg-white py-[1rem] left-[20%] px-[4rem]"
-            href="#"
+          <p
+            className="absolute bottom-[8%] text-[12px] font-bold bg-white py-[1rem] left-[20%] px-[4rem] cursor-pointer"
+            onClick={()=>{router.push({
+              pathname: '/searchpage',
+              query: { type:"men" }
+              }, '/searchpage')}}
+            
           >
             SHOP NOW
-          </a>
+          </p>
         </div>
         <div className="w-[60%] h-[100%] bg-white flex flex-col justify-between">
-          <div className="w-[100%] flex justify-between  w-[59%] flex gap-[2rem]">
+          <div className="justify-between  w-[59%] flex gap-[2rem]">
             <a href="#" className="text-[14px] font-[700] ">
               All
             </a>
@@ -174,7 +199,7 @@ export default function Home() {
           <p className="border w-[150px] text-[22px] bg-[#333333] text-white font-bold">
             #newarrivals
           </p>
-          <a className="underline text-black font-bold">show now</a>
+          <p className="underline text-black font-bold cursor-pointer" onClick={()=>{router.push("/searchpage")}}>show now</p>
         </div>
       </div>
 
@@ -182,7 +207,7 @@ export default function Home() {
 
       <div className="w-[90%] h-[95vh] flex justify-between mt-[100px]">
         <div className="w-[60%] h-[100%] bg-white flex flex-col justify-between">
-          <div className="w-[100%] flex justify-between  w-[59%] flex gap-[2rem]">
+          <div className="justify-between  w-[59%] flex gap-[2rem]">
             <a href="#" className="text-[14px] font-[700] ">
               All
             </a>
@@ -292,12 +317,15 @@ export default function Home() {
         <div className=" w-[30%] h-[90%] flex flex-col text-[30px] text-center justify-between relative">
           <p className="underline font-bold">Women</p>
           <Image alt="image" src={womenImg} />
-          <a
-            href="#"
-            className="absolute bottom-[8%] text-[12px] font-bold bg-white py-[1rem] left-[20%] px-[4rem]"
+          <p
+            className="absolute bottom-[8%] text-[12px] font-bold bg-white py-[1rem] left-[20%] px-[4rem] cursor-pointer" 
+            onClick={()=>{router.push({
+              pathname: '/searchpage',
+              query: { type:"women" }
+              }, '/searchpage')}}
           >
             SHOP NOW
-          </a>
+          </p>
         </div>
       </div>
 
@@ -314,7 +342,11 @@ export default function Home() {
           <Image alt="image" src={saleBanner} />
         </div>
       </div>
-      <Footer />
+         <Footer/>
+         <div ref={messagesEndRef}></div>
     </div>
+    </>
   );
 }
+
+export default withRouter(Home)
