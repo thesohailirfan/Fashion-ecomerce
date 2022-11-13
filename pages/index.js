@@ -15,6 +15,8 @@ import newArrivals from "../public/assets/landingPage/newArrivals.png";
 import menSale from "../public/assets/landingPage/menSale.png";
 import womanSale from "../public/assets/landingPage/womanSale.png";
 import saleBanner from "../public/assets/landingPage/saleBanner.png";
+import Product from "../components/Product";
+import axios from "axios";
 
 import { withRouter,useRouter } from "next/router";
 // const handleDragStart = (e) => e.preventDefault();
@@ -45,6 +47,31 @@ function Home(props) {
       scrollToBottom()
     }
   },[props.router.query])
+
+  const [menProducts,setMenProducts]=useState([])
+  const [womenProducts,setWomenProducts]=useState([])
+  
+
+  const getProducts=()=>{
+    var config = {
+      method: 'get',
+      url: 'http://localhost:5000/api/product',
+      headers: { }
+    };
+    
+    axios(config)
+    .then(function (response) {
+      setMenProducts(response.data.data.filter(u=>u.men))
+      setWomenProducts(response.data.data.filter(u=>!u.men))
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
+
+  useEffect(()=>{
+    getProducts()
+  },[])
 
 
 
@@ -103,90 +130,7 @@ function Home(props) {
             </a>
           </div>
           <div className="w-[100%] h-[90%] grid grid-cols-3 gap-[20px]">
-            <div className="text-center flex flex-col">
-              <div>
-                <Image alt="image" src={MenCloth} width={500} height={500} />
-              </div>
-
-              <br />
-              <a href="#" className="text-[15px]">
-                Funnel Collor Puffer Jacket
-              </a>
-
-              <a href="#" className="font-bold text-[13px]">
-                $59.00
-              </a>
-            </div>
-            <div className="text-center flex flex-col">
-              <div>
-                <Image alt="image" src={MenCloth} width={500} height={500} />
-              </div>
-
-              <br />
-              <a href="#" className="text-[15px]">
-                Funnel Collor Puffer Jacket
-              </a>
-
-              <a href="#" className="font-bold text-[13px]">
-                $59.00
-              </a>
-            </div>
-            <div className="text-center flex flex-col">
-              <div>
-                <Image alt="image" src={MenCloth} width={500} height={500} />
-              </div>
-
-              <br />
-              <a href="#" className="text-[15px]">
-                Funnel Collor Puffer Jacket
-              </a>
-
-              <a href="#" className="font-bold text-[13px]">
-                $59.00
-              </a>
-            </div>
-            <div className="text-center flex flex-col">
-              <div>
-                <Image alt="image" src={MenCloth} width={500} height={500} />
-              </div>
-
-              <br />
-              <a href="#" className="text-[15px]">
-                Funnel Collor Puffer Jacket
-              </a>
-
-              <a href="#" className="font-bold text-[13px]">
-                $59.00
-              </a>
-            </div>
-            <div className="text-center flex flex-col">
-              <div>
-                <Image alt="image" src={MenCloth} width={500} height={500} />
-              </div>
-
-              <br />
-              <a href="#" className="text-[15px]">
-                Funnel Collor Puffer Jacket
-              </a>
-
-              <a href="#" className="font-bold text-[13px]">
-                $59.00
-              </a>
-            </div>
-            <div className="text-center flex flex-col">
-              <div>
-                <Image alt="image" src={MenCloth} width={500} height={500} />
-              </div>
-
-              <br />
-              <a href="#" className="text-[15px]">
-                Funnel Collor Puffer Jacket
-              </a>
-
-              <a href="#" className="font-bold text-[13px]">
-                $59.00
-              </a>
-            </div>
+            {menProducts.slice(0,6).map((item,index)=>{return (<Product name={item.name} price={item.price} image={item.image} men={item.men}/>)})}
           </div>
         </div>
       </div>
@@ -228,90 +172,7 @@ function Home(props) {
             </a>
           </div>
           <div className="w-[100%] h-[90%] grid grid-cols-3 gap-[20px]">
-            <div className="text-center flex flex-col">
-              <div>
-                <Image alt="image" src={MenCloth} width={500} height={500} />
-              </div>
-
-              <br />
-              <a href="#" className="text-[15px]">
-                Funnel Collor Puffer Jacket
-              </a>
-
-              <a href="#" className="font-bold text-[13px]">
-                $59.00
-              </a>
-            </div>
-            <div className="text-center flex flex-col">
-              <div>
-                <Image alt="image" src={MenCloth} width={500} height={500} />
-              </div>
-
-              <br />
-              <a href="#" className="text-[15px]">
-                Funnel Collor Puffer Jacket
-              </a>
-
-              <a href="#" className="font-bold text-[13px]">
-                $59.00
-              </a>
-            </div>
-            <div className="text-center flex flex-col">
-              <div>
-                <Image alt="image" src={MenCloth} width={500} height={500} />
-              </div>
-
-              <br />
-              <a href="#" className="text-[15px]">
-                Funnel Collor Puffer Jacket
-              </a>
-
-              <a href="#" className="font-bold text-[13px]">
-                $59.00
-              </a>
-            </div>
-            <div className="text-center flex flex-col">
-              <div>
-                <Image alt="image" src={MenCloth} width={500} height={500} />
-              </div>
-
-              <br />
-              <a href="#" className="text-[15px]">
-                Funnel Collor Puffer Jacket
-              </a>
-
-              <a href="#" className="font-bold text-[13px]">
-                $59.00
-              </a>
-            </div>
-            <div className="text-center flex flex-col">
-              <div>
-                <Image alt="image" src={MenCloth} width={500} height={500} />
-              </div>
-
-              <br />
-              <a href="#" className="text-[15px]">
-                Funnel Collor Puffer Jacket
-              </a>
-
-              <a href="#" className="font-bold text-[13px]">
-                $59.00
-              </a>
-            </div>
-            <div className="text-center flex flex-col">
-              <div>
-                <Image alt="image" src={MenCloth} width={500} height={500} />
-              </div>
-
-              <br />
-              <a href="#" className="text-[15px]">
-                Funnel Collor Puffer Jacket
-              </a>
-
-              <a href="#" className="font-bold text-[13px]">
-                $59.00
-              </a>
-            </div>
+          {womenProducts.slice(0,6).map((item,index)=>{return (<Product name={item.name} price={item.price} image={item.image} men={item.men}/>)})}
           </div>
         </div>
         <div className=" w-[30%] h-[90%] flex flex-col text-[30px] text-center justify-between relative">

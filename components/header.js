@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React,{useEffect, useState} from "react";
 import Image from "next/image";
 import Logo from "../public/assets/landingPage/logo.png";
 import Heart from "../public/assets/landingPage/heart2.png";
@@ -13,7 +13,15 @@ const router=useRouter()
 const activeClass="font-bold cursor-pointer"
 const inactiveClass="text-[#535353] cursor-pointer"
 
+const [loggedIn,setLoggedIn]=useState(false)
+
 useEffect(()=>{
+  const token=sessionStorage.getItem("token")
+  if(token)
+  setLoggedIn(true)
+  else
+  setLoggedIn(false)
+
   console.log(router.pathname)
 },[router.pathname])
 
@@ -58,9 +66,9 @@ return (
       <Image alt="image" src={Bag} />
     </a>
 
-    <a className="text-[#535353] text-[18px] font-bold" href="./signup">
-      SignUp
-    </a>
+    <p onClick={()=>{if(loggedIn){sessionStorage.clear()} router.push("/signup")}} className="text-[#535353] text-[18px] font-bold cursor-pointer">
+      {loggedIn?"Sign Out":"Sign Up"}
+    </p>
   </div>
 </div>
 );

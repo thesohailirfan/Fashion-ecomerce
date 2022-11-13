@@ -57,6 +57,12 @@ const Signup = () => {
     });
   }
 
+  useEffect(()=>{
+    const token=sessionStorage.getItem("token")
+    if(token)
+    router.push("/")
+  },[])
+
   return (
     <div className="w-[100vw] h-[100vh] flex items-center justify-center ">
       <div className="w-[80%] h-[80%]  relative flex border rounded-lg justify-between">
