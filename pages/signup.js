@@ -73,7 +73,7 @@ const Signup = () => {
       <div className="w-[80%] h-[80%]  relative flex border rounded-lg">
         <div className="relative w-[55%] h-[100%]">
           <Image alt="image" src={heroImg} layout="fill" objectFit="contain" />
-          <button className="bg-[#0C222C] w-[15rem] absolute	left-[30%] top-[20%] flex p-[15px] justify-around items-center rounded rounded-[100px]">
+          <button className="bg-[#0C222C] w-[15rem] absolute	left-[30%] top-[20%] flex p-[15px] justify-around items-center rounded-[100px]">
             <p className="text-[#FFFFFF] ">Login With Google</p>{" "}
             <Image alt="image" src={gIcon} />
           </button>

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Logo from "../public/assets/landingPage/logo.png";
 import Heart from "../public/assets/landingPage/heart2.png";
 import Bag from "../public/assets/landingPage/Bag.png";
+import {toast} from "react-toastify"
 
 import { useRouter } from "next/router";
 
@@ -59,12 +60,12 @@ return (
       </div>
   </div>
   <div className="  w-[15%] flex justify-between items-center">
-    <a href="#">
+    <p onClick={()=>{if(!loggedIn){toast.error("Please Login!");router.push("/login")}}}>
       <Image alt="image" src={Heart} />
-    </a>
-    <a href="#">
+    </p>
+    <p>
       <Image alt="image" src={Bag} />
-    </a>
+    </p>
 
     <p onClick={()=>{if(loggedIn){sessionStorage.clear()} router.push("/signup")}} className="text-[#535353] text-[18px] font-bold cursor-pointer">
       {loggedIn?"Sign Out":"Sign Up"}

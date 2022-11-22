@@ -5,6 +5,7 @@ import rightarrow from "../public/assets/searchpage/rightArror.png";
 import { withRouter } from 'next/router'
 import SearchPageProduct from "../components/SearchPageProduct";
 import axios from "axios";
+
 const Searchpage = (props) => {
 
 
@@ -19,6 +20,8 @@ const Searchpage = (props) => {
   const [womenOnePieceCheck,setWomenOnePieceCheck]=useState(false)
   const [womenShirtCheck,setWomenShirtCheck]=useState(false)
   const [womenTshirtCheck,setWomenTshirtCheck]=useState(false)
+
+  const [search,setSearch]=useState("")
 
   useEffect(()=>{
     //console.log(props.router.query.type)
@@ -35,6 +38,7 @@ const Searchpage = (props) => {
   },[props.router.query])
 
   const [products,setProducts]=useState([])
+  const [productsToShow,setProductsToShow]=useState([])
 
   const getProducts=()=>{
     var config = {
@@ -45,7 +49,21 @@ const Searchpage = (props) => {
     
     axios(config)
     .then(function (response) {
-     setProducts(response.data.data)
+     if((menCheck&&womenCheck)||(!menCheck&&!womenCheck))
+     {
+      setProducts(response.data.data)
+      setProductsToShow(response.data.data)
+     }
+     else if(menCheck&&!womenCheck)
+     {
+      setProducts(response.data.data.filter(u=>u.men))
+      setProductsToShow(response.data.data.filter(u=>u.men))
+     }
+     else
+     {
+      setProducts(response.data.data.filter(u=>!u.men))
+      setProductsToShow(response.data.data.filter(u=>!u.men))
+     }
     })
     .catch(function (error) {
       console.log(error);
@@ -54,7 +72,19 @@ const Searchpage = (props) => {
 
   useEffect(()=>{
     getProducts()
-  },[])
+  },[menCheck,womenCheck])
+
+  useEffect(()=>{
+    if(search)
+    {
+      setProductsToShow(products.filter(u=>u.name.toLowerCase().includes(search.toLowerCase())))
+    }
+    else
+    {
+      setProductsToShow(products)
+    }
+
+  },[search])
 
 
   return (
@@ -153,13 +183,13 @@ const Searchpage = (props) => {
         <div className="w-[70%]   flex flex-col justify-between gap-[20px]">
           <input
             type="text"
-            name=""
             placeholder="Search..."
-            id=""
+            value={search}
+            onChange={(e)=>{setSearch(e.target.value)}}  
             className="w-[100%] h-[50px] rounded-[100px] px-[20px] shadow-xl border"
           />
           <div className="w-[100%] mt-[20px] h-[100%] grid grid-cols-3 gap-[20px]">
-           {products.map((item,index)=>{return (<SearchPageProduct key={index} name={item.name} type={item.type} price={item.price} image={item.image}/>)})}
+           {productsToShow.map((item,index)=>{return (<SearchPageProduct key={index} name={item.name} type={item.type} price={item.price} image={item.image}/>)})}
           </div>
         </div>
       </div>

@@ -2,8 +2,22 @@ import React from "react";
 import Image from "next/image";
 import heart from "../public/assets/landingPage/heart2.png";
 import star from "../public/assets/searchpage/start.png";
+import { useRouter } from "next/router";
+import {toast} from "react-toastify"
 
-const SearchPageProduct = ({type,name,price,image,forMen,menWomenFilter,typeFilter}) => {
+const SearchPageProduct = ({type,name,price,image,typeFilter}) => {
+
+  const router=useRouter()
+
+  const checkLogin=()=>{
+    const token=sessionStorage.getItem("token")
+    if(!token)
+    {
+      toast.error("Please Login!")
+      router.push("/login")
+    }
+  }
+
   return (
     <div className=" border-[#F7F7F7] border-[2px] p-[5px] flex flex-col justify-around rounded-[7px]">
      <div className={"w-[250px] h-[250px]"}>
@@ -26,15 +40,15 @@ const SearchPageProduct = ({type,name,price,image,forMen,menWomenFilter,typeFilt
       </div>
       <div className="flex justify-between items-center">
         <p className="font-bold">{price}$</p>
-        <div className="w-[12px] ">
+        <div className="w-[12px]" onClick={checkLogin}>
           <Image alt="image" src={heart} width={20} />
         </div>
-        <a
-          href="#"
+        <p
           className="border p-[3px] border-[#D9D9D9] text-[12px] w-[70px] text-center"
+          onClick={checkLogin}
         >
           Buy Now
-        </a>
+        </p>
       </div>
     </div>
   </div>
