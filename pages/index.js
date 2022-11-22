@@ -1,16 +1,14 @@
-import React, { Component, useState ,useEffect,useRef} from "react";
+import React, { useState ,useEffect,useRef} from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import Head from "next/head";
 import Image from "next/image";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import HeroImg from "../public/assets/landingPage/hero.png";
 import MenImg from "../public/assets/landingPage/menImage.png";
 import womenImg from "../public/assets/landingPage/womenImg.png";
-import MenCloth from "../public/assets/landingPage/menCloth.png";
 import newArrivals from "../public/assets/landingPage/newArrivals.png";
 import menSale from "../public/assets/landingPage/menSale.png";
 import womanSale from "../public/assets/landingPage/womanSale.png";
@@ -50,6 +48,9 @@ function Home(props) {
 
   const [menProducts,setMenProducts]=useState([])
   const [womenProducts,setWomenProducts]=useState([])
+
+  const [menProductsToShow,setMenProductsToShow]=useState([])
+  const [womenProductsToShow,setWomenProductsToShow]=useState([])
   
 
   const getProducts=()=>{
@@ -62,7 +63,10 @@ function Home(props) {
     axios(config)
     .then(function (response) {
       setMenProducts(response.data.data.filter(u=>u.men))
+      setMenProductsToShow(response.data.data.filter(u=>u.men))
+
       setWomenProducts(response.data.data.filter(u=>!u.men))
+      setWomenProductsToShow(response.data.data.filter(u=>!u.men))
     })
     .catch(function (error) {
       console.log(error);
@@ -73,11 +77,35 @@ function Home(props) {
     getProducts()
   },[])
 
+  const [menProductsFilter,setMenProductsFilter]=useState("all")
+  const [womenProductsFilter,setWomenProductsFilter]=useState("all")
+
+  useEffect(()=>{
+    if(menProductsFilter=="all")
+    {
+      setMenProductsToShow(menProducts)
+    }
+    else
+    {
+      setMenProductsToShow(menProducts.filter(p=>p.type==menProductsFilter))
+    }
+  },[menProductsFilter])
+
+  useEffect(()=>{
+    if(womenProductsFilter=="all")
+    {
+      setWomenProductsToShow(womenProducts)
+    }
+    else
+    {
+      setWomenProductsToShow(womenProducts.filter(p=>p.type==womenProductsFilter))
+    }
+  },[womenProductsFilter])
 
 
   return (
     <>
-    <div className="w-[100%]  overflow-x-hidden		flex flex-col items-center">
+    <div className="w-[100%]  overflow-x-hidden	flex flex-col items-center">
       <Header />
 
       {/* carousel Section */}
@@ -103,34 +131,33 @@ function Home(props) {
               pathname: '/searchpage',
               query: { type:"men" }
               }, '/searchpage')}}
-            
           >
             SHOP NOW
           </p>
         </div>
         <div className="w-[60%] h-[100%] bg-white flex flex-col justify-between">
           <div className="justify-between  w-[59%] flex gap-[2rem]">
-            <a href="#" className="text-[14px] font-[700] ">
+            <p onClick={()=>{setMenProductsFilter("all")}} className={menProductsFilter=="all"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
               All
-            </a>
-            <a href="#" className="text-[14px] font-[700] text-[#535353]">
+            </p>
+            <p onClick={()=>{setMenProductsFilter("blazer")}} className={menProductsFilter=="blazer"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
               BLAZERS
-            </a>
-            <a href="#" className="text-[14px] font-[700] text-[#535353]">
+            </p>
+            <p onClick={()=>{setMenProductsFilter("jackets")}} className={menProductsFilter=="jackets"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
               JACKETS
-            </a>
-            <a href="#" className="text-[14px] font-[700] text-[#535353]">
+            </p>
+            <p onClick={()=>{setMenProductsFilter("dresses")}} className={menProductsFilter=="dresses"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
               DRESSES
-            </a>
-            <a href="#" className="text-[14px] font-[700] text-[#535353]">
+            </p>
+            <p onClick={()=>{setMenProductsFilter("trousers")}} className={menProductsFilter=="trousers"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
               TROUSERS
-            </a>
-            <a href="#" className="text-[14px] font-[700] text-[#535353]">
+            </p>
+            <p onClick={()=>{setMenProductsFilter("accessories")}} className={menProductsFilter=="accessories"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
               ACCESSORIES
-            </a>
+            </p>
           </div>
           <div className="w-[100%] h-[90%] grid grid-cols-3 gap-[20px]">
-            {menProducts.slice(0,6).map((item,index)=>{return (<Product name={item.name} price={item.price} image={item.image} men={item.men}/>)})}
+            {menProductsToShow.slice(0,6).map((item,index)=>{return (<Product name={item.name} price={item.price} image={item.image} men={item.men}/>)})}
           </div>
         </div>
       </div>
@@ -152,27 +179,27 @@ function Home(props) {
       <div className="w-[90%] h-[95vh] flex justify-between mt-[100px]">
         <div className="w-[60%] h-[100%] bg-white flex flex-col justify-between">
           <div className="justify-between  w-[59%] flex gap-[2rem]">
-            <a href="#" className="text-[14px] font-[700] ">
+            <p onClick={()=>{setWomenProductsFilter("all")}} className={womenProductsFilter=="all"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
               All
-            </a>
-            <a href="#" className="text-[14px] font-[700] text-[#535353]">
+            </p>
+            <p onClick={()=>{setWomenProductsFilter("blazer")}} className={womenProductsFilter=="blazer"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
               BLAZERS
-            </a>
-            <a href="#" className="text-[14px] font-[700] text-[#535353]">
+            </p>
+            <p onClick={()=>{setWomenProductsFilter("jacket")}} className={womenProductsFilter=="jacket"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
               JACKETS
-            </a>
-            <a href="#" className="text-[14px] font-[700] text-[#535353]">
+            </p>
+            <p onClick={()=>{setWomenProductsFilter("dresses")}} className={womenProductsFilter=="dresses"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
               DRESSES
-            </a>
-            <a href="#" className="text-[14px] font-[700] text-[#535353]">
+            </p>
+            <p onClick={()=>{setWomenProductsFilter("trousers")}} className={womenProductsFilter=="trousers"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
               TROUSERS
-            </a>
-            <a href="#" className="text-[14px] font-[700] text-[#535353]">
+            </p>
+            <p onClick={()=>{setWomenProductsFilter("accessories")}} className={womenProductsFilter=="accessories"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
               ACCESSORIES
-            </a>
+            </p>
           </div>
           <div className="w-[100%] h-[90%] grid grid-cols-3 gap-[20px]">
-          {womenProducts.slice(0,6).map((item,index)=>{return (<Product name={item.name} price={item.price} image={item.image} men={item.men}/>)})}
+          {womenProductsToShow.slice(0,6).map((item,index)=>{return (<Product name={item.name} price={item.price} image={item.image} men={item.men}/>)})}
           </div>
         </div>
         <div className=" w-[30%] h-[90%] flex flex-col text-[30px] text-center justify-between relative">

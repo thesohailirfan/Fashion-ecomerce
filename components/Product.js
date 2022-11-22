@@ -11,8 +11,8 @@ const Product = ({image,name,price,men}) => {
         query: { type:men?"men":"women" }
         }, '/searchpage')
         }}>
-        <div>
-            <img alt="image" src={image} width={500} height={500} />
+        <div className={"w-[250px] h-[250px]"}>
+            <img alt="image" src={image} width={300} height={300} />
         </div>
 
               <br />
