@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import Image from "next/image";
 import Header from "../components/Header";
 import bgImg from "../public/assets/profile/bgImg.png";
@@ -8,8 +8,83 @@ import delImg from "../public/assets/profile/delImg.png";
 import eImg from "../public/assets/profile/editImg.png";
 import arrowImg from "../public/assets/profile/arrow.png";
 import profileImg from "../public/assets/profile/profile.png";
+import {toast} from "react-toastify"
+import axios from "axios";
 
-const profile = () => {
+const Profile = () => {
+
+  const [fName,setFName]=useState("")
+  const [mName,setMName]=useState("")
+  const [lName,setLName]=useState("")
+  const [email,setEmail]=useState("")
+  const [phone,setPhone]=useState("")
+  const [city,setCity]=useState("")
+  const [state,setState]=useState("")
+
+  const getUserData=()=>{
+    const token=sessionStorage.getItem("token")
+    var config = {
+      method: 'get',
+      url: 'http://localhost:5000/api/user',
+      headers: { 
+        'Authorization': 'Bearer '+token
+      }
+    };
+    
+    axios(config)
+    .then(function (response) {
+      console.log(JSON.stringify(response.data));
+      let d=response.data.data
+      setFName(d.firstName)
+      setMName(d.middleName)
+      setLName(d.lastName)
+      setEmail(d.email)
+      setPhone(d.phone)
+      setState(d.state)
+      setCity(d.city)
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
+
+  const updateUserData=()=>{
+    var data = JSON.stringify({
+      "firstName": fName,
+      "middleName": mName,
+      "lastName": lName,
+      "phone": phone,
+      "state": state,
+      "city": city,
+      "email": email
+    });
+    
+    var config = {
+      method: 'put',
+      url: 'http://localhost:5000/api/users',
+      headers: { 
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpZCI6IjYzN2ZiMmVkMDg2NzY5NDI5NGQyODA5ZiIsImlhdCI6MTY2OTMxMzI2Mn0.KkvBSvaiTC3KmZZ_KtdZSlxscWu75Zv2ytydLbuUDFs', 
+        'Content-Type': 'application/json'
+      },
+      data : data
+    };
+    
+    axios(config)
+    .then(async function (response) {
+      console.log(JSON.stringify(response.data));
+      toast.success("Profile Succesfully Updated")
+      getUserData()
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+  }
+
+  useEffect(()=>{
+    getUserData()
+  },[])
+
   return (
     <div className="w-[100%] h-[100vh] flex flex-col items-center gap-[40px] bg-[#F2F2F2]">
       <Header />
@@ -59,6 +134,8 @@ const profile = () => {
             <div className="flex justify-between w-[50%]">
               <p className="font-bold">First Name</p>
               <input
+                value={fName}
+                onChange={(e)=>{setFName(e.target.value)}}
                 type="text"
                 className="border-[#CECECE] border-[2px] rounded-[5px] w-[65%]"
               />
@@ -66,6 +143,8 @@ const profile = () => {
             <div className="flex justify-between w-[50%]">
               <p className="font-bold">Middle Name</p>
               <input
+               value={mName}
+               onChange={(e)=>{setMName(e.target.value)}}
                 type="text"
                 className="border-[#CECECE] border-[2px] rounded-[5px] w-[65%]"
               />
@@ -73,13 +152,8 @@ const profile = () => {
             <div className="flex justify-between w-[50%]">
               <p className="font-bold">Last Name</p>
               <input
-                type="text"
-                className="border-[#CECECE] border-[2px] rounded-[5px] w-[65%]"
-              />
-            </div>
-            <div className="flex justify-between w-[50%]">
-              <p className="font-bold">Middle Name</p>
-              <input
+               value={lName}
+               onChange={(e)=>{setLName(e.target.value)}}
                 type="text"
                 className="border-[#CECECE] border-[2px] rounded-[5px] w-[65%]"
               />
@@ -87,6 +161,8 @@ const profile = () => {
             <div className="flex justify-between w-[50%]">
               <p className="font-bold">Phone No</p>
               <input
+               value={phone}
+               onChange={(e)=>{setPhone(e.target.value)}}
                 type="text"
                 className="border-[#CECECE] border-[2px] rounded-[5px] w-[65%]"
               />
@@ -94,6 +170,8 @@ const profile = () => {
             <div className="flex justify-between w-[50%]">
               <p className="font-bold">Email Address</p>
               <input
+               value={email}
+               onChange={(e)=>{setEmail(e.target.value)}}
                 type="text"
                 className="border-[#CECECE] border-[2px] rounded-[5px] w-[65%]"
               />
@@ -101,6 +179,8 @@ const profile = () => {
             <div className="flex justify-between w-[50%]">
               <p className="font-bold">State</p>
               <input
+               value={state}
+               onChange={(e)=>{setState(e.target.value)}}
                 type="text"
                 className="border-[#CECECE] border-[2px] rounded-[5px] w-[65%]"
               />
@@ -108,10 +188,18 @@ const profile = () => {
             <div className="flex justify-between w-[50%]">
               <p className="font-bold">City</p>
               <input
+               value={city}
+               onChange={(e)=>{setCity(e.target.value)}}
                 type="text"
                 className="border-[#CECECE] border-[2px] rounded-[5px] w-[65%]"
               />
             </div>
+            <p
+          className="border p-[3px] border-[#D9D9D9] text-[12px] w-[70px] text-center"
+          onClick={updateUserData}
+        >
+          Save Changes
+        </p>
           </div>
         </div>
       </div>
@@ -119,4 +207,4 @@ const profile = () => {
   );
 };
 
-export default profile;
+export default Profile;

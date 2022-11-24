@@ -140,20 +140,14 @@ function Home(props) {
             <p onClick={()=>{setMenProductsFilter("all")}} className={menProductsFilter=="all"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
               All
             </p>
-            <p onClick={()=>{setMenProductsFilter("blazer")}} className={menProductsFilter=="blazer"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
-              BLAZERS
+            <p onClick={()=>{setMenProductsFilter("tshirt")}} className={menProductsFilter=="tshirt"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
+              T-SHIRTS
             </p>
-            <p onClick={()=>{setMenProductsFilter("jackets")}} className={menProductsFilter=="jackets"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
-              JACKETS
+            <p onClick={()=>{setMenProductsFilter("shirt")}} className={menProductsFilter=="shirt"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
+              SHIRTS
             </p>
-            <p onClick={()=>{setMenProductsFilter("dresses")}} className={menProductsFilter=="dresses"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
-              DRESSES
-            </p>
-            <p onClick={()=>{setMenProductsFilter("trousers")}} className={menProductsFilter=="trousers"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
-              TROUSERS
-            </p>
-            <p onClick={()=>{setMenProductsFilter("accessories")}} className={menProductsFilter=="accessories"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
-              ACCESSORIES
+            <p onClick={()=>{setMenProductsFilter("jeans")}} className={menProductsFilter=="jeans"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
+              JEANS
             </p>
           </div>
           <div className="w-[100%] h-[90%] grid grid-cols-3 gap-[20px]">
@@ -182,20 +176,17 @@ function Home(props) {
             <p onClick={()=>{setWomenProductsFilter("all")}} className={womenProductsFilter=="all"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
               All
             </p>
-            <p onClick={()=>{setWomenProductsFilter("blazer")}} className={womenProductsFilter=="blazer"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
-              BLAZERS
+            <p onClick={()=>{setWomenProductsFilter("tshirt")}} className={womenProductsFilter=="tshirt"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
+              T-SHIRT
             </p>
-            <p onClick={()=>{setWomenProductsFilter("jacket")}} className={womenProductsFilter=="jacket"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
-              JACKETS
+            <p onClick={()=>{setWomenProductsFilter("shirt")}} className={womenProductsFilter=="shirt"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
+              SHIRT
             </p>
-            <p onClick={()=>{setWomenProductsFilter("dresses")}} className={womenProductsFilter=="dresses"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
-              DRESSES
+            <p onClick={()=>{setWomenProductsFilter("jeans")}} className={womenProductsFilter=="jeans"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
+              JEANS
             </p>
-            <p onClick={()=>{setWomenProductsFilter("trousers")}} className={womenProductsFilter=="trousers"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
-              TROUSERS
-            </p>
-            <p onClick={()=>{setWomenProductsFilter("accessories")}} className={womenProductsFilter=="accessories"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
-              ACCESSORIES
+            <p onClick={()=>{setWomenProductsFilter("onepiece")}} className={womenProductsFilter=="onepiece"?"text-[14px] font-[700] cursor-pointer":"text-[14px] font-[700] text-[#535353] cursor-pointer"}>
+              ONE-PIECE
             </p>
           </div>
           <div className="w-[100%] h-[90%] grid grid-cols-3 gap-[20px]">

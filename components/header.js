@@ -3,6 +3,7 @@ import Image from "next/image";
 import Logo from "../public/assets/landingPage/logo.png";
 import Heart from "../public/assets/landingPage/heart2.png";
 import Bag from "../public/assets/landingPage/Bag.png";
+import user from "../public/assets/landingPage/user.png";
 import {toast} from "react-toastify"
 
 import { useRouter } from "next/router";
@@ -55,17 +56,20 @@ return (
           }, '/')}}>
           CONTACT US
         </p>
-        <input type="text" name="" placeholder="Search..." id=""
-          className="w-[40%] h-[55%] rounded-[100pc] px-[20px] shadow-xl" />
+        {router.pathname=="/searchpage"?null:<input type="text" name="" placeholder="Search..." id=""
+          className="w-[40%] h-[55%] rounded-[100pc] px-[20px] shadow-xl" />}
       </div>
   </div>
   <div className="  w-[15%] flex justify-between items-center">
-    <p onClick={()=>{if(!loggedIn){toast.error("Please Login!");router.push("/login")}}}>
+    <p onClick={()=>{if(!loggedIn){toast.error("Please Login!");router.push("/login")}}} className="cursor-pointer">
       <Image alt="image" src={Heart} />
     </p>
-    <p>
+    <p className="cursor-pointer">
       <Image alt="image" src={Bag} />
     </p>
+    {loggedIn&&<p className="cursor-pointer">
+      <Image alt="image" src={user} height={28} width={28} onClick={()=>{router.push("/profile")}} />
+    </p>}
 
     <p onClick={()=>{if(loggedIn){sessionStorage.clear()} router.push("/signup")}} className="text-[#535353] text-[18px] font-bold cursor-pointer">
       {loggedIn?"Sign Out":"Sign Up"}
