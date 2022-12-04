@@ -129,7 +129,7 @@ const ProductPage = () => {
             <button className="w-[200px] border p-[5px] bg-[#333333] text-white font-bold rounded-lg">
               ADD TO CART
             </button>
-            <button className="w-[200px] border border-2 border-[#333333] p-[5px] bg-[#FFFFF] text-[#333333] font-bold rounded-lg">
+            <button className="w-[200px] border-2 border-[#333333] p-[5px] bg-[#FFFFF] text-[#333333] font-bold rounded-lg">
               ADD TO WISHLIST
             </button>
           </div>
@@ -143,7 +143,7 @@ const ProductPage = () => {
             </div>
           </div>
           <div className="mt-[10px] w-[80%] min-h-[20%]">
-            <button className="border w-[100%] p-[7px] border-[1px] border-[#ADADAD] flex items-center justify-between px-[20px] rounded-lg">
+            <button className="w-[100%] p-[7px] border-[1px] border-[#ADADAD] flex items-center justify-between px-[20px] rounded-lg">
               {openDetails == true ? (
                 <div className="w-[100%] flex items-center justify-between">
                   <p className="justify-self-satrt">Product Details</p>
@@ -177,7 +177,7 @@ const ProductPage = () => {
               )}
             </button>
 
-            <button className="border w-[100%] p-[7px] border-[1px] border-[#ADADAD] flex items-center justify-between px-[20px] rounded-lg">
+            <button className="w-[100%] p-[7px] border-[1px] border-[#ADADAD] flex items-center justify-between px-[20px] rounded-lg">
               {openDescription == true ? (
                 <div className="w-[100%] flex items-center justify-between">
                   <p className="justify-self-satrt">Product Description</p>
@@ -212,7 +212,7 @@ const ProductPage = () => {
               )}
             </button>
 
-            <button className="border w-[100%] p-[7px] border-[1px] border-[#ADADAD] flex items-center justify-between px-[20px] rounded-lg">
+            <button className="w-[100%] p-[7px] border-[1px] border-[#ADADAD] flex items-center justify-between px-[20px] rounded-lg">
               {openReviews == true ? (
                 <div className="w-[100%] flex items-center justify-between">
                   <p className="justify-self-satrt">Reviews</p>

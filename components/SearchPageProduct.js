@@ -7,6 +7,8 @@ import {toast} from "react-toastify"
 
 const SearchPageProduct = ({type,name,price,image,typeFilter}) => {
 
+  const typeJSON={"tshirt":"T-Shirt","shirt":"Shirt","jeans":"Jeans","onepiece":"One Piece"}
+
   const router=useRouter()
 
   const checkLogin=()=>{
@@ -25,7 +27,7 @@ const SearchPageProduct = ({type,name,price,image,typeFilter}) => {
         </div>
     <div className="px-[10px]">
       <div>
-        <p className="text-[12px] text-[#A8A8A8]">{type}</p>
+        <p className="text-[12px] text-[#A8A8A8]">{typeJSON[type]}</p>
         <p className="text-[14px]">{name}</p>
       </div>
       <div className="flex justify-between w-[60%]">
